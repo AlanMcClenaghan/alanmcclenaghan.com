@@ -1,0 +1,83 @@
+<!--
+  function addition() {
+  	return (w + x + y + z);
+  }
+
+  w = 3;
+  x = 4;
+  y = 5;
+  z = 6;
+
+  total = addition (w, x, y, z);
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Variables, Arrays and Conditionals</title>
+
+    <style type="text/css">
+      body {
+        font-family: sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Variables, Arrays and Conditionals</h1>
+
+    <input id="input" type="text" placeholder="Type some text here" />
+
+    <input id="button" type="submit" value="Change the text" />
+
+    <p id="text">
+      Type in the box above and click on the button to change this text.
+    </p>
+
+    <input id="magic-guess" type="text" placeholder="Input magic word" />
+
+    <input id="magic-button" type="submit" value="Submit magic word" />
+
+    <p id="magic-answer">Can you guess the magic word?</p>
+
+    <script type="text/javascript">
+      var input = document.getElementById("input");
+      var button = document.getElementById("button");
+      var text = document.getElementById("text");
+
+      var newText = input.value;
+
+      button.onclick = function() {
+        text.textContent = input.value;
+      };
+
+      var family = ["Alan", "Ruth", "Matthew", "Lucy"];
+
+      console.log(family);
+
+      family.push("Granny Trudy");
+
+      console.log(family);
+
+      // (index, delete number of items, items to insert)
+      family.splice(4, 0, "Grandad Alan");
+
+      console.log(family);
+
+      var magicWord = "JavaScript";
+      var magicGuess = document.getElementById("magic-guess");
+      var magicButton = document.getElementById("magic-button");
+      var magicAnswer = document.getElementById("magic-answer");
+
+      magicButton.onclick = function() {
+        if (magicGuess.value == magicWord) {
+          magicAnswer.textContent =
+            "That's correct! The secret word is JavaScript.";
+        } else {
+          magicAnswer.textContent =
+            "That's incorrect! JavaScript is the magic word.";
+          magicGuess.value = "";
+        }
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Object Oriented JavaScript - Sub Classes</title>
+</head>
+<body>
+    <h1>Object Oriented JavaScript - Sub Classes</h1>
+    <p>View Page Source for example code in the script tags below.</p>      
+    <p>View the console for the output of the code.</p>
+
+    <script>
+
+        class Person {
+            constructor(firstName, lastName) {
+                this.firstName = firstName;
+                this.lastName = lastName;
+            }
+
+            greeting() {
+                return `Hello there, ${this.firstName} ${this.lastName}`
+            }
+        }
+
+        class Customer extends Person {
+            constructor(firstName, lastName, phone, memnbership) {
+                super(firstName, lastName);
+
+                this.phone = phone;
+                this.memnbership = memnbership;
+            }
+
+            static getMembershipCost() {
+                return 500;
+            }
+        }
+
+        const john = new Customer('John', 'Doe', '555-555-5555', 'Standard');
+
+        console.log(john);
+
+        console.log(john.greeting());
+
+        console.log(Customer.getMembershipCost());
+
+    </script>
+    <!-- <script src="sub-classes.js"></script> -->
+</body>
+</html>

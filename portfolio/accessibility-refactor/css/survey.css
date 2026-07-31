@@ -1,0 +1,63 @@
+/* Survey page styles */
+
+.photo {
+  width: 60%;
+  padding: 10px;
+}
+
+form {
+  margin: 0 auto;
+  text-align: left;
+  display: inline-block;
+}
+
+.container {
+  text-align: center;
+}
+
+.newsletter {
+  text-align: right;
+}
+
+fieldset {
+  border: none;
+}
+
+legend {
+  display: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  background-color: #F89406;
+}
+
+button {
+  margin-top: 5px;
+  margin-bottom: 20px;
+  border: 0;
+  width: 130px;
+  height: 2em;
+  font-size: 1em;
+  border-radius: 10px;
+  background-color: white;
+}
+
+button:hover {
+  color: white;
+  background-color: #F89406;
+}
+
+.hint {
+  margin-top: -15px;
+  font-size: .8em;
+}
+
+
+/* Styles for larger screens */
+@media screen and (min-width: 840px) {
+  .photo {
+    width: 40%;
+  }
+}

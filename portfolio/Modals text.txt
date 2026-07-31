@@ -1,0 +1,360 @@
+<!-- Modal 1 -->
+      <div class="modal fade" id="portfolio-1" tabindex="-1" role="dialog" aria-labelledby="portfolio-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Personal Profile</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+
+                <img src="images/personal-profile.jpg" alt="Personal profile website">
+                <h3>Personal Profile<br>Portfolio Website</h3>
+                <p class="project-description">Customised the code for a basic personal profile webpage by adding graphics, custom text, and a stylish design.</p>
+                <p class="skills-used">HTML, CSS, GitHub</p>
+
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <a href="portfolio/personal-portfolio-page/" target="_blank">
+                <button type="button" class="btn btn-primary">
+                View live site</button>
+              </a>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal" data-toggle="modal" data-target="#portfolio-2">Next</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal 2 -->
+      <div class="modal fade" id="portfolio-2" tabindex="-1" role="dialog" aria-labelledby="portfolio-2" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Responsive Layout</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+
+                <img src="images/responsive-layout.jpg" alt="Responsive layout for a website">
+                <h3>Responsive Layout<br>example page</h3>
+                <p class="project-description">Built a responsive, mobile-first layout using HTML and CSS, demonstrating an understanding of responsive design by using media queries and breakpoints to accommodate small, medium, and large screen sizes.</p>
+                <p class="skills-used">HTML, CSS, GitHub</p>
+
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal" data-toggle="modal" data-target="#portfolio-1">Previous</button>
+              <a href="portfolio/responsive-layout/index.html" target="_blank">
+                <button type="button" class="btn btn-primary">
+                View live site</button>
+              </a>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal" data-toggle="modal" data-target="#portfolio-3">Next</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal 3 -->
+      <div class="modal fade" id="portfolio-3" tabindex="-1" role="dialog" aria-labelledby="portfolio-3" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Registration Form</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+
+                <img src="images/register-form.jpg" alt="Example Registration Form">
+                <h3>Registration Form<br>example page</h3>
+                <p class="project-description">Built a responsive, mobile-friendly registration form using a wide variety of HTML form input types and attributes.</p>
+                <p class="skills-used">HTML, CSS, GitHub</p>
+
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal" data-toggle="modal" data-target="#portfolio-2">Previous</button>
+              <a href="portfolio/online-registration-form/index.html" target="_blank">
+                <button type="button" class="btn btn-primary">
+                View live site</button>
+              </a>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal" data-toggle="modal" data-target="#portfolio-4">Next</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal 4 -->
+      <div class="modal fade" id="portfolio-4" tabindex="-1" role="dialog" aria-labelledby="portfolio-4" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Photo Gallery Lightbox</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+
+                <img src="images/photo-gallery.jpg" alt="Image of a photo gallery">
+                <h3>Photo Gallery<br>Lightbox</h3>
+                <p class="project-description">Created an interactive photo gallery using JavaScript and jQuery, including a search area and lightbox feature.</p>
+                <p class="skills-used">HTML, CSS, Javascript, jQuery Plugins, GitHub</p>
+
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal" data-toggle="modal" data-target="#portfolio-3">Previous</button>
+              <a href="portfolio/photo-gallery/index.html" target="_blank">
+                <button type="button" class="btn btn-primary">
+                View live site</button>
+              </a>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal" data-toggle="modal" data-target="#portfolio-5">Next</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal 5 -->
+      <div class="modal fade" id="portfolio-5" tabindex="-1" role="dialog" aria-labelledby="portfolio-5" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">CSS to Sass</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+
+                <img src="images/responsive-layout.jpg" alt="CSS to Sass site update">
+                <h3>CSS to Sass<br>site update</h3>
+                <p class="project-description">Converted a CSS stylesheet to Sass. Refactored the stylesheet from the Build a Responsive Layout project using SCSS partials, variables, extends, and mixins.</p>
+                <p class="skills-used">HTML, CSS, Sass, GitHub</p>
+
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal" data-toggle="modal" data-target="#portfolio-4">Previous</button>
+              <a href="portfolio/SVG-site-update/index.html" target="_blank">
+                <button type="button" class="btn btn-primary">
+                View live site</button>
+              </a>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal" data-toggle="modal" data-target="#portfolio-6">Next</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal 6 -->
+      <div class="modal fade" id="portfolio-6" tabindex="-1" role="dialog" aria-labelledby="portfolio-6" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">SVG site update</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+
+                <img src="images/svg-update.jpg" alt="SVG site update">
+                <h3>SVG<br>site update</h3>
+                <p class="project-description">Replaced the rasterised PNG images on a webpage and modernised the UI using SVGs.</p>
+                <p class="skills-used">HTML, CSS, SVGs, GitHub</p>
+
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal" data-toggle="modal" data-target="#portfolio-5">Previous</button>
+              <a href="portfolio/SVG-site-update/index.html" target="_blank">
+                <button type="button" class="btn btn-primary">
+                View live site</button>
+              </a>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal" data-toggle="modal" data-target="#portfolio-7">Next</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal 7 -->
+      <div class="modal fade" id="portfolio-7" tabindex="-1" role="dialog" aria-labelledby="portfolio-7" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Interactive video player</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+
+                <img src="images/video-player.jpg" alt="Interactive video player">
+                <h3>Interactive<br>video player</h3>
+                <p class="project-description">Built an HTML5 video player using JavaScript and the HTML5 Video API. Synchronised the video to the transcript so that the transcript highlights as the video progresses or when a user clicks on the transcript it takes them to the appropriate place in the video.</p>
+                <p class="skills-used">HTML, CSS, Javascript, GitHub</p>
+
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal" data-toggle="modal" data-target="#portfolio-6">Previous</button>
+              <a href="" target="_blank">
+                <button type="button" class="btn btn-primary">
+                View live site</button>
+              </a>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal" data-toggle="modal" data-target="#portfolio-8">Next</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal 8 -->
+      <div class="modal fade" id="portfolio-8" tabindex="-1" role="dialog" aria-labelledby="portfolio-8" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Accessibility refactor</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+
+                <img src="images/accessibility-refactor.jpg" alt="Accessibility refactor webpage">
+                <h3>Accessibility<br>refactor</h3>
+                <p class="project-description">Refactored the website files provided to improve the site's accessibility for users and generally reduce time to download and parse for search engines</p>
+                <p class="skills-used">HTML, CSS, GitHub</p>
+
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal" data-toggle="modal" data-target="#portfolio-7">Previous</button>
+             <a href="" target="_blank">
+                <button type="button" class="btn btn-primary">
+                View live site</button>
+              </a>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal" data-toggle="modal" data-target="#portfolio-9">Next</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal 9 -->
+      <div class="modal fade" id="portfolio-9" tabindex="-1" role="dialog" aria-labelledby="portfolio-9" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Web app dashboard</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+
+                <img src="images/web-app-dashboard.jpg" alt="Web app dashboard">
+                <h3>Web app<br>dashboard</h3>
+                <p class="project-description">Took a mockup and a few icons and built a web dashboard complete with JavaScript-driven charts and graphs.</p>
+                <p class="skills-used">HTML, CSS, Javascript, AJAX, JSON, Widgets, LocalStorage</p>
+
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal" data-toggle="modal" data-target="#portfolio-8">Previous</button>
+               <a href="" target="_blank">
+                <button type="button" class="btn btn-primary">
+                View live site</button>
+              </a>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal" data-toggle="modal" data-target="#portfolio-10">Next</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal 10 -->
+      <div class="modal fade" id="portfolio-10" tabindex="-1" role="dialog" aria-labelledby="portfolio-10" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Employee directory</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+
+                <img src="images/employee-directory.jpg" alt="Employee directory">
+                <h3>Employee directory<br>using a public API</h3>
+                <p class="project-description">Used the Random User Generator API to build a prototype for an employee directory, requesting a JSON object from the API and parsing the data so that employees are listed in a grid with their thumbnail image and personal details. Clicking on an employee opens a modal window with more detailed photo and information.</p>
+                <p class="skills-used">HTML, CSS, Javascript, AJAX, JSON, Modals, Github</p>
+
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal" data-toggle="modal" data-target="#portfolio-9">Previous</button>
+              <a href="portfolio/employee-directory/index.html" target="_blank">
+                <button type="button" class="btn btn-primary">
+                View live site</button>
+              </a>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal" data-toggle="modal" data-target="#portfolio-11">Next</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal 11 -->
+      <div class="modal fade" id="portfolio-11" tabindex="-1" role="dialog" aria-labelledby="portfolio-11" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">ruthmansergh.com author website</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+
+                <img src="images/ruthmansergh.jpg" alt="Books page from ruthmansergh.com website">
+                <h3>ruthmansergh.com<br>author website</h3>
+                <p class="project-description">Based on Treehouse's How to Make a Website course, created a portfolio website to promote my partner's writing and books.</p>
+                <p class="skills-used">HTML, CSS</p>
+
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal" data-toggle="modal" data-target="#portfolio-10">Previous</button>
+              <a href="http://www.ruthmansergh.com/" target="_blank">
+                <button type="button" class="btn btn-primary">
+                View live site</button>
+              </a>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal" data-toggle="modal" data-target="#portfolio-12">Next</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal 12 -->
+      <div class="modal fade" id="portfolio-12" tabindex="-1" role="dialog" aria-labelledby="portfolio-12" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">"Under construction" page</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+
+                <img src="images/alanmcclenaghan.jpg" alt="Under Construction page for a website">
+                <h3>"Under construction"<br>Bootstrap page</h3>
+                <p class="project-description">Created a basic Bookstrap landing page while my website was underconstruction.</p>
+                <p class="skills-used">HTML, CSS, Bootstrap</p>
+
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal" data-toggle="modal" data-target="#portfolio-11">Previous</button>
+              <a href="portfolio/under-construction/index.html" target="_blank">
+                <button type="button" class="btn btn-primary">
+                View live site</button>
+              </a>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    

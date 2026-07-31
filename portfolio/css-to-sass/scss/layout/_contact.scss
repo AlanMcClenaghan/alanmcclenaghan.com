@@ -1,0 +1,31 @@
+#contact {
+  
+  & {
+    color: $white-text;
+    padding: 50px 5%;
+    @media #{$brk-narrow} {
+      padding: 40px 15%;
+    }
+  }
+
+  & p {
+    @include text(1.3em, $weight:normal, $color:$white-text);
+    padding: 0 5%;
+  }
+
+  & a {
+    
+    & {
+      @include text(1em, $weight:bold, $color:$white-text);
+      @extend %none;
+      text-transform: lowercase;
+      margin-left: 10px;
+    }
+    
+    &:hover {
+      color: $anchor;
+    }
+    
+  }
+
+}

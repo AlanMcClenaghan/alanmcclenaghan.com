@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/main.css">
+  <title>JavaScript Basics</title>
+ </head>
+<body>
+  <div class="container">
+  <h1>Random Number Generator</h1>
+  <script> 
+        var inputStart = prompt("Please type a starting number");
+        var inputEnd = prompt("Please type an end number");
+        var startNumber = parseInt(inputStart);
+        var topNumber = parseInt(inputEnd);
+        var randomNumber = Math.floor(Math.random() * (topNumber - startNumber + 1) ) + startNumber;
+        var message = "<p>" + randomNumber + " is a number between " + startNumber + " and " + topNumber + ".</p>"
+        document.write(message);    
+  </script> 
+  </div>
+</body>
+</html>

@@ -1,0 +1,78 @@
+#portfolio {
+  @extend %frame;
+}
+
+#skills {
+  @extend %frame;  
+  border-top: 10px solid $background-color;
+}
+
+#portfolio p,
+#skills p {
+  @include text(1.3em, $l-height: 1.5em);
+  margin-bottom: 40px;
+}
+
+.portfolio-image {
+  @extend %max90;
+}
+
+.skills-image {
+  @extend %max90;
+  background-color: $lightgrey-fill;
+  padding: 5% 22%;
+}
+
+.col {
+  
+  & {
+    @media #{$brk-narrow} {
+      float: left;
+      width: 42.5%;
+      margin-left: 5%;
+    }
+    @media #{$brk-wide} {
+      float: left;
+      width: 30%;
+      margin: 20px 0 0 2.5%;
+    }
+   }
+
+  &:nth-child(1n) {
+    @media #{$brk-narrow} {
+      clear: right;
+    }
+  }
+  
+  &:nth-child(4n) {
+    @media #{$brk-wide} {
+      clear: right;
+    }
+   }
+  
+}
+
+.col2 {
+  @media #{$brk-narrow} {
+    float: left;
+    width: 33%;
+    margin: 20px 0 0 0.25%;
+  }
+}
+
+.portfolio {
+  
+  &-image {
+    @media #{$brk-narrow} {
+      max-width: 100%; //Can't apply extend because: You may not @extend an outer selector from within @media. You may only @extend selectors within the same directive.
+    }
+  }
+
+  &-item p {
+    @media #{$brk-narrow} {
+      width: 90%; //Can't apply extend because: You may not @extend an outer selector from within @media. You may only @extend selectors within the same directive.
+      margin: 0 auto; //Can't apply extend because: You may not @extend an outer selector from within @media. You may only @extend selectors within the same directive.
+    }
+  }
+
+}

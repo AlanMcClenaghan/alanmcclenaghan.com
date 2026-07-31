@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Star Wars Spoilers</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<body>
+    <img src="img/deathstar.png" />
+    <p class="spoiler">
+        <span>Darth Vader is Luke Skywalker's Father! Noooooooooooo!</span>
+    </p>
+    <p class="spoiler">
+        <span>Jar Jar Binks is Sith!</span>
+    </p>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    
+    <script>
+        
+    /*
+    Event delegation: event listener added to parent element
+    so that dynamically added elements still 
+    work when added after the event listener
+    */
+
+    /*
+    $(this) does not seem to work with arrow functions, 
+    so a function declaration is used in this instance instead
+    */
+    $('.spoiler').on('click', 'button', function(event) {
+        // Show the spoiler text
+        $(this).next().css('display', 'block');                         
+        // Hide the "Reveal Spoiler" button
+        $(this).hide();                   
+    });
+
+    // Create the "Reveal Spoiler" button
+    const $button = $('<button>Reveal Spoiler</button>');
+    // Append to web page
+    $('.spoiler').prepend($button);
+    
+    // Hide the spoiler text
+    $('.spoiler span').hide();
+
+    </script>
+    
+</body>
+</html>

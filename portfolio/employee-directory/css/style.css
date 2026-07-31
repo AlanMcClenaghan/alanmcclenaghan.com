@@ -1,0 +1,212 @@
+/* ================================= 
+  Element Styles
+==================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+#wrapper {
+  width: 100%;
+  margin: auto;
+  padding: 10px;
+}
+
+#searchbox {
+  text-align: center;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: 500;
+  margin: 20px 0;
+}
+
+.search {
+  width: 80%;
+  margin: 30px 0 30px;
+  padding: 12px 2.5%;
+  border: 1px solid lightgrey;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.employee-short {
+  margin-bottom: 1em;
+  padding: 1em 0;
+  background: #fff;
+  border-radius: .5em;
+  border: solid 2px #dfdfdf;
+  vertical-align: middle;  
+}
+
+.employee-short:hover {
+  border: solid 2px red;
+  background: rgba(255,0,0,.05); 
+}
+
+.employee-long {
+  height: 450px;
+}
+
+img {
+  border-radius: 50%;
+}
+
+.employee-short img {
+  float: left;
+  width: 80px;
+  height: 80px;
+  margin: 1.5em 2%;
+}
+
+.employee-long img {
+  width: 120px;
+  height: 120px;
+  margin-top: 30px;
+}
+
+span {
+  display: block;
+  color: #b2b5b8;
+  font-size: 1em;
+  margin: .9em 0;
+}
+
+span.name {
+  font-size: 1.25em;
+  font-weight: 600;
+  color: #404a51;
+}
+
+.employee-short .email {
+  font-size: .8em;
+}
+
+.employee-long .email {
+  font-size: 1em;
+}
+
+.name,
+.city,
+.address {
+  text-transform: capitalize;
+}
+
+hr {
+  margin: 1em 5%;
+  border: 1px solid #dfdfdf;
+}
+
+button {
+  border: 0;
+  background-color: white;
+  padding: 10px;
+}
+
+.previous,
+.next {
+  font-size: .75em;
+  font-weight: 900;
+  color: lightslategrey;
+  text-transform: uppercase;
+}
+
+.previous {
+  float: left;
+  margin-left: 5%;
+}
+
+.next {
+  float: right;
+  margin-right: 5%;
+}
+
+.previous:hover,
+.next:hover {
+  color: darkslategrey;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+/* ================================= 
+  Media Queries 768px
+==================================== */
+
+@media (min-width: 768px) {
+
+  #wrapper {
+    width: 100%;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 1.25em;
+    margin-left: 2.5%;
+  }
+  
+  .search {
+    width: 60%;
+  }
+
+  .employee-short img {
+    width: 90px;
+    height: 90px;
+    margin: 1em 2%;
+  }
+
+  .employee-long img {
+    width: 170px;
+    height: 170px;
+  }
+
+  .employee-long {
+    height: 510px;
+  }
+
+  hr {
+    margin: 1.5em 5%;
+    border: 1px solid #dfdfdf;
+  }
+  
+  .modal {
+    float: left;
+    width: 45%;
+    margin: 0 2.5%;
+  }
+  
+}
+
+/* ================================= 
+  Media Queries 1240px
+==================================== */
+
+@media (min-width: 1240px) {
+  
+  #wrapper {
+    max-width: 1240px;
+  }
+  
+  h1 {
+    font-size: 1.25em;
+    margin: 50px 1.633% 20px;
+  }
+  
+  .search {
+    width: 50%;
+  }
+
+  .employee-short img {
+    width: 100px;
+    height: 100px;
+    margin: .75em 2%;
+  }
+  
+  .modal {
+    float: left;
+    width: 30%;
+    margin: 0 1.633%;
+  }
+  
+}

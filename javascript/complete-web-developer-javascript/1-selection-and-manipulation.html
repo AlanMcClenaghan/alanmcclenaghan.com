@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Selection and Manipulating Styles With Javascript</title>
+
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Selection and Manipulating Styles With Javascript</h1>
+
+    <button onclick="alert('Hi, Alan!')">Click Me!</button>
+
+    <p id="text"></p>
+
+    <button id="button1">Change Text</button>
+
+    <p id="secondPar">JavaScript is ...</p>
+
+    <button id="button2">Append Text</button>
+
+    <p id="empty"></p>
+
+    <button id="button3">Click here for a secret message</button>
+
+    <p id="styleText">This is some text</p>
+
+    <button id="styleButton">Change text style</button>
+
+    <script>
+      var text = document.getElementById("text");
+
+      text.innerHTML = "Hello World!";
+
+      //        alert("The page has loaded.");
+
+      //        text.innerHTML = "Hello Alan!";
+
+      document.getElementById("button1").onclick = function() {
+        alert("Button clicked");
+        text.innerHTML = "Nice job!";
+      };
+
+      var secondPar = document.getElementById("secondPar");
+
+      document.getElementById("button2").onclick = function() {
+        secondPar.innerHTML = "I think... " + secondPar.innerHTML + " Great!";
+      };
+
+      var empty = document.getElementById("empty");
+
+      document.getElementById("button3").onclick = function() {
+        empty.innerHTML = "Darth Vadar is Luke Skywalker's father!";
+      };
+
+      var styleText = document.getElementById("styleText");
+
+      document.getElementById("styleButton").onclick = function() {
+        styleText.style.color = "red";
+        styleText.style.backgroundColor = "yellow";
+        styleText.style.fontSize = "200%";
+      };
+    </script>
+  </body>
+</html>

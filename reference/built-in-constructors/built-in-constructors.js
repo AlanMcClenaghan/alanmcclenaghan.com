@@ -1,0 +1,113 @@
+// Primitive types created as objects - best avoided
+
+// String
+const name1 = 'Jeff';
+const name2 = new String('Jeff');
+
+console.log(name1);
+console.log(name2);
+
+console.log(typeof name1);
+console.log(typeof name2);
+
+name2.age = 21;
+console.log(name2);
+
+if ( name1 === 'Jeff') {
+    console.log('YES');
+} else {
+    console.log('NO');
+}
+
+if ( name2 === 'Jeff') {
+    console.log('YES');
+} else {
+    console.log('NO');
+}
+
+if ( name2 == 'Jeff') {
+    console.log('YES');
+} else {
+    console.log('NO');
+}
+
+
+// Number
+
+const num1 = 5;
+const num2 = new Number(5);
+
+console.log(num1);
+console.log(num2);
+
+console.log(typeof num1);
+console.log(typeof num2);
+
+if ( num2 === 5) {
+    console.log('YES');
+} else {
+    console.log('NO');
+}
+
+if ( num2 == 5) {
+    console.log('YES');
+} else {
+    console.log('NO');
+}
+
+// Boolean
+const bool1 = true
+const bool2 = new Boolean(true);
+
+console.log(bool1);
+console.log(bool2);
+
+console.log(typeof bool1);
+console.log(typeof bool2);
+
+if ( bool2 === true ) {
+    console.log('YES');
+} else {
+    console.log('NO');
+}
+
+if ( bool2 ) {
+    console.log('YES');
+} else {
+    console.log('NO');
+}
+
+// Regular Expressions
+const reg1 = /\w+/;
+const reg2 = new RegExp('\\w+')
+
+console.log(reg1);
+console.log(reg2);
+
+
+// Functions and Objects work the same but require more typing - best avoided
+
+// Function
+const getSum1 = function(x, y) {
+    return x + y;
+}
+
+const getSum2 = new Function('x', 'y', 'return x + y');
+
+console.log(getSum1(1,1));
+console.log(getSum2(1,1));
+
+
+// Objects
+const john1 = {name: 'John'};
+const john2 = new Object({name: 'John'});
+
+console.log(john1);
+console.log(john2);
+
+// Arrays
+const arr1 = [1,2,3,4]
+const arr2 = new Array(1,2,3,4);
+
+console.log(arr1);
+console.log(arr2);

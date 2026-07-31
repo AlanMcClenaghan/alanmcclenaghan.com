@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+    crossorigin="anonymous">
+  <title>DOM Manipulaton & Events - Traversing the DOM</title>
+</head>
+
+<body>
+  <div class="container">
+      <h1>DOM Manipulaton & Events - Traversing the DOM</h1>
+      <p>View Page Source for example code in the script tags below.</p>      
+      <p>View the console for the output of the code.</p>
+    <div class="row">
+      <div class="col s12">
+        <div id="main" class="card">
+          <div class="card-content">
+            <span class="card-title">Task List</span>
+            <div class="row">
+              <form id="task-form">
+                <div class="input-field col s12">
+                  <input type="text" name="task" id="task" value="Walk the dog">
+                  <label for="task">New Task</label>
+                </div>
+            </div>
+            <input type="submit" value="Add Task" class="btn">
+            </form>
+          </div>
+          <div class="card-action">
+            <h5 id="task-title">Tasks</h5>
+            <ul class="collection">
+              <li class="collection-item">
+                List Item
+                <a href="#" class="delete-item secondary-content">
+                  <i class="fa fa-remove"></i>
+                </a>
+              </li> 
+              <li class="collection-item">
+                List Item
+                <a href="#" class="delete-item secondary-content">
+                  <i class="fa fa-remove"></i>
+                </a>
+              </li> 
+              <li class="collection-item">
+                List Item
+                <a href="#" class="delete-item secondary-content">
+                  <i class="fa fa-remove"></i>
+                </a>
+              </li>
+              <li class="collection-item">
+                List Item
+                <a href="#" class="delete-item secondary-content">
+                  <i class="fa fa-remove"></i>
+                </a>
+              </li>
+              <li class="collection-item">
+                List Item
+                <a href="#" class="delete-item secondary-content">
+                  <i class="fa fa-remove"></i>
+                </a>
+              </li>
+            </ul>
+            <a class="clear-tasks btn black" href="">Clear Tasks</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script>
+
+    let val;
+
+    const list = document.querySelector('ul.collection');
+    const listItem = document.querySelector('li.collection-item:first-child');
+
+    val = list;
+    console.log(val);
+
+    val = listItem;
+    console.log(val);
+
+
+    // Get childNodes - Give us all types of nodes, not just elements
+
+    val = list.childNodes;
+    console.log(val);
+
+    val = list.childNodes[0];
+    console.log(val);
+
+    val = list.childNodes[0].nodeName;
+    console.log(val);
+
+    val = list.childNodes[3].nodeType;
+    console.log(val);
+
+    /* Node types
+        1 - Element     2 - Attribute (deprecated)      3 - Text node
+        8 - Comment     9 - Document itself             10 - Doctype
+    */
+
+    // Get children - Gives us just the elements in a HTML collection
+
+    val = list.children;
+    console.log(val);
+
+    val = list.children[1];
+    console.log(val);
+
+    list.children[2].textContent = 'Hello World!';
+
+    // Children of children
+
+    list.children[3].children[0].id = 'test-link';
+    val = list.children[3].children;
+    console.log(val);
+
+
+    // firstChild and firstElementChild
+
+    val = list.firstChild;
+    console.log(val);
+
+    val = list.firstElementChild;
+    console.log(val);
+
+
+    // lastChild and lastElementChild
+
+    val = list.lastChild;
+    console.log(val);
+
+    val = list.lastElementChild;
+    console.log(val);
+
+
+    // Count child elements
+
+    val = list.childElementCount;
+    console.log(val);
+
+
+    // firstChild and firstElementChild
+
+    val = listItem.parentNode;
+    console.log(val);
+
+    val = listItem.parentElement;
+    console.log(val);
+
+    val = listItem.parentElement.parentElement; // Traverse all the way to the HTML tag
+    console.log(val);
+
+
+    // Get nextSibling  and nextelementSibling
+
+    val = listItem.nextSibling;
+    console.log(val);
+
+    val = listItem.nextElementSibling;
+    console.log(val);
+
+
+    // Get previousSibling  and previousElementSibling
+
+    val = listItem.previousSibling;
+    console.log(val);
+
+    val = listItem.previousElementSibling;
+    console.log(val);
+    
+  </script>
+  <script src="traversing-the-DOM.js"></script>
+</body>
+
+</html>

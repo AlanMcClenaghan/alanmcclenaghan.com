@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Javascript Functions</title>
+
+    <style type="text/css">
+      body {
+        font-family: sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <h1>Javascript Functions</h1>
+    
+    <p id="instructions">How many fingers are you holding up?</p>
+
+    <select id="fingers">
+      <option>0</option>
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+
+    <input id="submit" type="submit" value="Number of fingers" />
+
+    <script type="text/javascript">
+      function makeAGuess(correctAnswer) {
+        var guess = Math.floor(Math.random() * 6);
+        console.log(guess);
+        if (guess == correctAnswer) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+
+      var submit = document.getElementById("submit");
+
+      submit.onclick = function() {
+        var fingers = document.getElementById("fingers").value;
+        var gotIt = false;
+        var numberOfGuesses = 1;
+
+        while (gotIt == false) {
+          if (makeAGuess(fingers) == true) {
+            gotIt = true;
+            alert(
+              "Got it! It was " +
+                fingers +
+                ". It took me " +
+                numberOfGuesses +
+                " guess(es)."
+            );
+          } else {
+            numberOfGuesses++;
+          }
+        }
+      };
+    </script>
+  </body>
+</html>

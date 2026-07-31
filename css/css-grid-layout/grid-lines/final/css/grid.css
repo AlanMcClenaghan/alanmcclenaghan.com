@@ -1,0 +1,83 @@
+/* ===================================== 
+   Grid Layout
+======================================== */
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 100px minmax(200px, 1fr) 100px;
+    grid-gap: 10px;
+}
+
+.header-1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.footer-1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.header-2 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.main-2 {
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+.footer-2 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.main-3 {
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.aside-3 {
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+
+.header-4 {
+    grid-column-start: 1;
+    grid-column-end: -1;
+}
+
+.main-4 {
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.aside-4 {
+    grid-row-start: 2;
+    grid-row-end: -1;
+}
+
+.footer-4 {
+    grid-row-start: -2;
+    grid-row-end: -1;
+}
+
+.header-5 {
+    grid-column: 1 / -1;
+}
+
+.main-5 {
+    grid-row: 2 / 3;
+}
+
+.aside-5 {
+    grid-row: 2 / -1;
+}
+
+.footer-5 {
+    grid-row: -2 / -1;
+}
+

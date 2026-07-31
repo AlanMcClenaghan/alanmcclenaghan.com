@@ -1,0 +1,59 @@
+.bottom {
+  
+  float: left;
+  margin: 15px 0 15px;
+  
+  &-nav {
+    display: none;
+    @media #{$brk-narrow} {
+      display: inline;
+      float: right;
+      margin: 0;
+    }
+    @media #{$brk-wide} {
+      padding: 0;
+    }
+  }
+
+  &-nav li {
+    @media #{$brk-narrow} {
+      display: inline;
+      padding-left: 20px;
+    }
+  }
+
+  &-nav li a {
+    @media #{$brk-narrow} {
+      @include text(1em, $color:$text-color-body);
+      text-decoration: none; //Can't apply extend because: You may not @extend an outer selector from within @media. You may only @extend selectors within the same directive.
+    }
+  }
+
+  &-nav a:hover {
+    @media #{$brk-narrow} {
+      color: $anchor;
+    }
+  }
+
+}
+
+.footer-nav {
+  @extend %w90;
+  margin: 0 5%;
+  padding: 30px 0;
+  border-top: 1px solid $white-border;
+}
+
+.back {
+  float: right;
+  margin: 15px 0 15px;
+  @media #{$brk-narrow} {
+    display: none;
+  }
+
+  & a {
+    @extend %none;
+    color: $text-color-body;
+  }
+
+}

@@ -1,0 +1,835 @@
+/*************************************** 
+mobile (320px)
+***************************************/
+
+/*General selectors*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  font-size: 100%;
+  line-height: 1.6;
+}
+
+#wrapper {
+  width: 100%;
+  margin: 0 auto;
+  background-color: white;
+}
+
+
+/*Type selectors*/
+
+h1, h2, h3 {
+  margin-top: 0;
+  font-size: 1em;
+  font-weight: normal; 
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/* Header styles */
+
+header {
+  display: flex;
+  width: 100%;
+  height: 70px;
+  padding-top: 20px;
+  color: white;
+  background-color: #7477bf;
+}
+
+#app-name {
+  margin: 0 0 0 20px;
+  padding-top: 5px;
+  font-size: 1.2em;
+}
+
+#notification {
+  position: relative;
+  margin-left: auto;
+}
+
+#notification-icon {
+  margin-left: auto;
+  height: 35px;
+  width: 35px;
+  padding-right: 8px;
+  opacity: .5;
+  transition: 0.3s;
+}
+
+#notification-counter {
+  height: 18px;
+  width: 18px;
+  position: absolute;
+  top: -4px;
+  right: 6px;
+  font-size: 12px;
+  text-align: center;
+  vertical-align: middle;
+  background-color: red;
+  border-radius: 50%;
+}
+
+#notification-icon:hover {
+  opacity: 1;
+  -webkit-transition: all .5s ease-in;
+  -moz-transition: all .5s ease-in;
+  transition: all .5s ease-in;
+  -webkit-transition: scale(1.2);
+  -moz-transition: all scale(1.2);
+  transform: scale(1.2);
+}
+
+#notification-list {
+  display: none;
+  flex-direction: column;
+  z-index: 1000;
+  position: absolute;
+  top: 45px;
+  right: -108px;
+  margin: auto;
+  padding: 0;
+  list-style-type: none;
+}
+
+.notification-item {
+  text-align: left;
+  width: 250px;
+  margin-bottom: 1px;
+  padding: 10px 10px;
+  border-radius: 5px;
+  font-size: .8em;
+  line-height: 1.75;
+  background-color: red;
+  color: white;
+}
+
+.notification-item::after {
+  position: absolute;
+  left: 50%;
+}
+
+.notification-item::after {
+  border-style: solid;
+  border-width: 1em;
+  border-color: transparent transparent red transparent;
+  top: -25px;
+  left: 106px;
+  content: "";
+}
+
+#profile {
+  display: flex;
+  margin: -5px -8px 10px 0;
+  border-left: 1px solid darkgrey;
+}
+
+#profile-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid white;
+  margin-left: 10px;
+}
+
+header h3 {
+  font-size: 0.7em;
+  padding: 10px 0;
+  margin: 3px 30px 0 5px;
+}
+
+
+/* Navigation styles */
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  background-color: #4d4c72;
+}
+
+#main-nav {
+  max-width: 320px;
+  display: flex;
+  align-items: center;
+  flex: 1 1 auto;
+  justify-content: space-between;
+}
+
+.nav-links {
+  display: flex;
+  padding: 17px;
+  border-bottom: 5px solid #4d4c72;
+}
+
+.nav-links svg {
+  height: 30px;
+  width: 30px;
+  fill: white;
+  opacity: .5;
+  transition: 0.3s;
+}
+
+#Line_2 {
+  opacity: 1;
+}
+
+.nav-links svg:hover {
+  opacity: 1;
+  -webkit-transition: all .25s ease-in;
+  -moz-transition: all .25s ease-in;
+  transition: all .25s ease-in;
+  -webkit-transition: scale(1.2);
+  -moz-transition: all scale(1.2);
+  transform: scale(1.2);
+}
+
+.selected {
+  border-bottom: 5px solid #85db80;
+}
+
+/* dashboard-search styles */
+
+#dashboard-search {
+  display: flex;
+}
+
+#dashboard {
+  display: flex;
+  align-items: center;
+  width: 155px;
+  margin: 0;
+  padding: 10px 20px 0;
+  color: #666;
+}
+
+#search-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  margin: 0;
+  padding-right: 20px;
+  background-color: #fbfbfb;
+  border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+}
+
+#search-box {
+  width: 100%;
+} 
+
+#search {
+  float: right;
+  width: 95%;
+  max-width: 380px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: .8em;
+  background-image: url('../icons/icon-search.svg');
+  background-position: 98% 50%; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 20px;
+}
+
+
+/* The alert message box */
+
+#alert {
+  margin: 15px 20px 30px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: .7em;
+  background-color: #7377bf;
+  color: white;
+}
+
+/* The close button */
+.close-button {
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 18px;
+  line-height: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.close-button:hover {
+    -webkit-transition: all .25s ease-in;
+    -moz-transition: all .25s ease-in;
+    transition: all .25s ease-in;
+    -ms-transform: scale(1.3); /* IE 9 */
+    -webkit-transform: scale(1.3); /* Safari */
+    transform: scale(1.3);
+}
+
+
+/* Chart styles */
+
+#traffic,
+#daily-traffic,
+#mobile-users {
+  width: 100%;
+  margin: auto;
+  padding: 10px 20px 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+#daily-traffic h3,
+#mobile-users h3 {
+  margin-top: 20px;
+}
+
+#daily-traffic canvas,
+#mobile-users canvas {
+  margin-bottom: 20px;
+}
+
+#selector-buttons {
+  float: right;
+  margin-top: -10px;
+}
+
+#selector-buttons button {
+  width: 60px;
+  margin: 0;
+  border: 0;
+  font-weight: 700;
+  color: #666;
+  background-color: white;
+}
+
+#selector-buttons button {
+  margin: 7px 0 0;
+  padding: 5px 0;
+  font-size: 0.8em;
+  font-weight: 500;
+  color: #666;
+  border-radius: 25%/50%;
+  transition: .25s;
+}
+
+#selector-buttons button:hover {
+  color: white;
+  background-color: #ccc;
+  -webkit-transition: all .25s ease-in;
+  -moz-transition: all .25s ease-in;
+  transition: all .25s ease-in;
+}
+
+#selector-buttons button.active {
+  border-radius: 25%/50%;
+  color: white;
+  background-color: #85db80;
+  transition: .25s;
+}
+
+
+/* Main section syles */
+
+#social-stats,
+#new-members,
+#recent-activity,
+#message {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+#settings {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 10px 20px 20px;
+}
+
+#social-stats h3,
+#new-members h3,
+#recent-activity h3,
+#message h3,
+#settings h3 {
+  text-align: left;
+  width: 100%;
+  margin-top: 20px;
+}
+
+
+/* Social stats styles */
+
+#twitter,
+#facebook,
+#google {
+  width: 100%;
+  margin: 10px auto;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  padding: 5px 10px;
+  height: 115px;
+  background-color: #fbfbfb;
+}
+
+.social-icon {
+  float: left;
+  height: 70px;
+  width: 70px;
+  margin: 15px;
+  background-color: #7377bf;
+  border-radius: 50%;
+}
+
+#social-stats img {
+  float: left;
+  height: 35px;
+  width: 35px;
+  margin: 20px;
+}
+
+.social-network,
+.number {
+  float: left;
+  text-align: left;
+  width: 50%;
+  color: #7377bf;
+  margin: 0;
+  padding: 0;
+}
+
+.social-network {
+  font-size: 1em;
+  letter-spacing: .1em;
+  color: #7377bf;
+  margin-top: 20px;
+}
+
+.number {
+  font-size: 2em;
+  font-weight: 300;
+  text-align: left;
+  color: #999;
+  margin-top: -10px;
+}
+
+
+/* Members styles */
+
+.member,
+.activity {
+  height: 90px;
+  width: 100%;
+  vertical-align: middle;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.member:last-child,
+.activity:last-child {
+  border: 0;
+}
+
+.last {
+  border: 0;
+}
+
+.member-image {
+  float: left;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 15px 15px 0 0;
+}
+
+.member-name,
+.member-activity {
+  float: left;
+  width: calc(100% - 55px);
+  margin: 15px 0 0;
+  text-align: left;
+  font-size: 1em;
+  font-weight: 100;
+  line-height: 1;
+  color: #666;
+}
+
+.member-activity {
+  width: 70%;
+}
+
+.member-email {
+  float: left;
+  width: 75%;
+  margin: 0; 
+  text-align: left;
+  font-size: 0.8em;
+  color: #7377bf;
+}
+
+.joined {
+  position: relative;
+  right: 0px;
+  bottom: 25px;
+  text-align: right;
+  font-size: 0.8em;
+  color: #666;
+}
+
+.time {
+  float: left;
+  width: 70%; 
+  margin: 0; 
+  text-align: left;
+  font-size: 0.8em;
+  color: #666;
+}
+
+.arrow {
+  position: relative;
+  right: 0px;
+  top: 25px;
+}
+  
+
+/* Message & settings styles */
+
+#message-form {
+  width: 100%;
+}
+
+#searchbox,
+#message-user,
+#send,
+#save,
+#cancel,
+#DropDownTimezone {
+  width: 100%;
+  margin: 10px auto;
+  padding: 12px;
+  border-radius: 4px;
+  font-size: .8em;
+  color: #666;
+}
+
+#searchbox,
+#message-user {
+  border: 1px solid #ccc;
+  background-color: #fbfbfb;
+}
+
+#send,
+#save,
+#cancel {
+  text-transform: uppercase;
+  color: white;
+  background-color: #7377bf;
+  border: 0;
+  margin-bottom: 20px;
+  vertical-align: bottom;
+}
+
+#save,
+#cancel {
+  width: 48%;
+}
+
+#save {
+  float: left;
+}
+
+#cancel {
+  float: right;
+  background-color: #b2b2b2;
+}
+
+
+/* On-off switches */
+
+.on-off-switch {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.on-off {
+  text-align: left;
+  width: 150px;
+  font-size: .8em;
+  color: #666;
+}
+
+select {
+  height: 40px;
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('../icons/icon-dropdown.svg');
+  background-position: 98% 50%; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 20px;
+}
+
+.onoffswitch {
+    position: relative; width: 90px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #CCCCCC; border-radius: 35px;
+}
+.onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 31px; padding: 0; line-height: 35px;
+    font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+    content: "ON";
+    padding-right: 30px;
+    background-color: #7377BF; color: #FFFFFF;
+}
+.onoffswitch-inner:after {
+    content: "OFF";
+    padding-right: 10px;
+    background-color: #B2B2B2;
+    text-align: right;
+}
+.onoffswitch-switch {
+    display: block; width: 25px; margin: 5px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 51px;
+    border: 2px solid #CCCCCC; border-radius: 31px;
+    transition: all 0.3s ease-in 0s; 
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px; 
+}
+
+
+/*Class selectors*/
+
+.strong {
+  font-weight: 700;
+}
+
+.light {
+  font-weight: 300;
+}
+
+.subhead {
+  display: inline-block;
+  float: left;
+  text-transform: uppercase;
+  font-size: .8em;
+  color: #666;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+/*************************************** 
+tablet (768px)
+***************************************/
+
+@media screen and (min-width: 768px) {
+  
+  
+  /* Header styles */
+  
+  #app-name {
+    margin: 0 0 0 30px;
+    padding-top: 0px;
+    font-size: 1.5em;
+  }
+  
+  header h3 {
+    font-size: 1em;
+    padding-top: 5px;
+    margin: 3px 30px 0 5px;
+  }  
+  
+  /* The alert message box */
+  
+  #alert {
+    font-size: .8em;
+  }
+  
+  .close-button {
+    font-size: 22px;
+    line-height: 22px;
+  }
+  
+  
+  /* Chart styles */
+  
+  #traffic {
+    border-bottom: 0;
+  }
+  
+  #daily-mobile {
+    margin-bottom: 20px;
+  }
+    
+  #daily-traffic,
+  #mobile-users {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  #daily-traffic {
+    border-right: 1px solid #ccc;
+  }
+  
+  #daily-traffic,
+  #mobile-users {
+    width: 50%;
+    justify-content: space-between;
+  }
+  
+  
+  /* Main section syles */
+  
+  #new-members,
+  #message {
+    border-right: 1px solid #ccc;
+  }
+  
+    
+  /* Social stats styles */
+  
+  #social-stats {
+    flex-direction: row;
+  }
+
+  #twitter,
+  #facebook,
+  #google {
+    width: 32%;
+    margin: 10px auto 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 5px 10px;
+    height: 115px;
+    background-color: #fbfbfb;
+  }
+  
+  
+  /* Message & settings styles */
+  
+  #message {
+    border-bottom: 0;
+  }
+  
+  #message-settings {
+    margin-bottom: 100px;
+  }
+
+  #message,
+  #settings {
+    justify-content: space-between;
+  }
+  
+  
+  /* Class selectors */
+
+  .flex {
+    flex-direction: row;
+  }
+  
+}
+
+/*************************************** 
+desktop (1024px)
+***************************************/
+
+@media screen and (min-width: 1024px) {
+  
+  
+  /* Header styles */
+  
+  header {
+    position: fixed;
+    z-index: 100;
+  }
+  
+  
+  /* Navigation styles */
+  
+  nav {
+    position: fixed;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 70px;
+    top: 70px;
+    height: 100%;
+  }
+
+  #main-nav {
+    flex-direction: column;
+    max-height: 320px;
+    margin-top: 20px;
+  }
+
+  .nav-links {
+    border-left: 5px solid #4d4c72;
+  }
+
+  .selected {
+    border-top: 5px solid #4d4c72;
+    border-bottom: 5px solid #4d4c72;
+    border-left: 5px solid #85db80;
+  }
+  
+  
+  /* Social stats styles */
+  
+  .social-network {
+    font-size: 1.25em;
+    margin-top: 15px;
+  }
+
+  .number {
+    font-size: 2.5em;
+  }
+  
+  /* Main section syles */
+  
+  main {
+    width: calc(100% - 70px);
+    float: right;
+    position: fixed;
+    top: 70px;
+    left: 70px;
+    height: 100%;
+    overflow: auto;
+  }
+  
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Quiz</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>JavaScript Quiz</h1>
+    
+    <p>This quiz was created with JavaScript from a object using functions and loops.</p>
+    
+    <div id="output">
+
+    </div>
+    <script>
+        
+        // Array of objects containing pairs of keys (question, answer) and values
+        var questions = [
+            {
+                question: 'How many states are in the United States?',
+                answer: 50
+            },
+            {
+                question: 'How many continents are there?',
+                answer: 7
+            },
+            {
+                question: 'How many legs does an insect have?', 
+                answer: 6
+            }
+        ];
+
+        // Global variables
+        var correctAnswers = 0;
+        var question;
+        var answer;
+        var response;
+        var html;
+        var correct = [];
+        var wrong = [];
+
+        /*
+        Function to display the message to the screen
+            First the div with the ID of 'output' is selected
+            then the content of message is inserted as innerHTML
+        */
+        function display(message) {
+            var outputDiv = document.getElementById('output');
+            outputDiv.innerHTML = message;
+        }
+
+        /*
+        Function to a build list of question from the array
+            HTML variable is created and an opening Ordered List tag is added
+            for loop through the array adding List Item tags
+            The Ordered List is closed
+            and listHTML is returned
+        */
+        function buildList(arr) {
+            var listHTML = "<ol>";
+            for (var i = 0; i < arr.length; i++) {
+                listHTML += "<li>" + arr[i] + "</li>";
+            }
+            listHTML += "</ol>";
+            return listHTML;
+        }
+
+        /*
+        For loop through the questions array.
+            question variable created and questions are added from the array using dot notation
+            answer variable created and answers are added from the array using dot notation
+            response variable created and each is prompted in the browser
+                and the answer is parsed into an integer.
+            Conditional statement test if the answer is correct, and if so
+                1 is added to the correctAnswers variable
+                and the question added to the correct variable using the push method
+            else the question is added to the wrong variable using the push method
+        */
+        for (var i = 0; i < questions.length; i++) {
+          question = questions[i].question;
+          answer = questions[i].answer;
+          response = parseInt(prompt(question));
+          if (response === answer) {
+                correctAnswers += 1;
+                correct.push(question);
+            } else {
+                wrong.push(question);
+            }
+        }
+
+        /*
+        String is built in the html variable with the number of correctAnswers
+        The buildList function is used to create a list of the correct answers
+        and the wrong answers
+        the display function inserts the contents of the html to the browser.
+        */
+        html = "<h2>You got " + correctAnswers + " question(s) right.</h2>";
+        html += "<h2>You got these questions correct:</h2>";
+        html += buildList(correct);
+        html += "<h2>you got these questions wrong:</h2>";
+        html += buildList(wrong);
+        display(html);
+    
+    </script>
+    
+</body>
+</html>

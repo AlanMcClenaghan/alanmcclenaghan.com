@@ -1,0 +1,107 @@
+#x-menu {
+    transition: all .5s ease-in-out; 
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    font-size: 1.5rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
+
+.jumbotron {
+  background: 
+    /* top, transparent gradient */ 
+    linear-gradient(
+      rgba(0, 123, 255, 0.75), 
+      rgba(0, 123, 255, 0.5)
+    ),
+    /* bottom, image */
+  url(images/hero-image.jpg);
+  background-size: cover;
+}
+
+.list-group-item {
+  padding: .1rem 1.25rem;
+}
+
+h2 {
+  display: block;
+}
+
+#portrait {
+  width: 50%;
+}
+
+.card {
+  transition: all .5s ease-in-out;
+}
+
+.card img {
+  max-width: 100%;
+  background-size: cover;
+}
+
+.card:hover {
+  transform: scale(0.975);
+  opacity: .5;
+}
+
+a.social {
+  transition: all .5s ease-in-out;
+  display: inline-block;
+  margin: 0 5px;
+  width: 50px;
+  height: 50px;
+  background-size: 50px 50px;
+  background-repeat: no-repeat;
+  opacity: 1;
+  transition: all .5s ease-in-out; 
+}
+
+a.github {
+  background-image: url(images/github.svg);
+}
+
+a.linkedin {
+  background-image: url(images/linkedin.svg);
+}
+
+a.twitter {
+  background-image: url(images/twitter.svg);
+}
+
+a.social:hover {
+  transform: scale(0.9);
+  opacity: .5;
+}
+
+.modal-body {
+  text-align: center;
+  color: #222; 
+}
+
+.modal-body img {
+  width: 80%;
+  margin-bottom: 20px;
+}
+
+.modal-body h3 {
+  margin: auto;
+  margin-bottom: 20px;
+  width: 80%;
+}
+
+.modal-body p {
+  margin: auto;
+  margin-bottom: 20px;
+  width: 60%;
+}
+
+.skills-used {
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 0 10px 20px;
+  background-color: white;
+  border: 2px solid #222;
+  border-radius: 5px;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Students</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Students</h1>
+    
+    <p>This report was created with JavaScript from a object using functions and loops.</p>
+    
+    <div id="output">
+    
+    </div>
+    
+    <script src="js/students.js"></script>
+    
+    <script>
+        
+        // Global variables
+        var report = "";
+        var student;
+
+        /*
+        Function to display the report to the screen
+            First the div with the ID of 'output' is selected
+            then the content of report is inserted as innerHTML
+        */
+        function display(report) {
+            var outputDiv = document.getElementById("output");
+            outputDiv.innerHTML = report;
+        }
+
+        /*
+        For loop through the students array.
+            student variable created to hold student information.
+            report variable created and student name, tracks, achievements and points 
+            added from the student variable
+        */
+        for (var i = 0; i < students.length; i++) {
+            student = students[i];
+            report += "<h2>Student: " + student.name + "</h2>";
+            report += "<p>Track: " + student.track + "</p>";
+            report += "<p>Achievements: " + student.achievements + "</p>";
+            report += "<p>Points: " + student.points + "</p>";
+
+        }
+
+        //Display functions is called with the report variable added as an argument
+        display(report)
+    
+    </script>
+    
+</body>
+</html>

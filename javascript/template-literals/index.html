@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Template Literals</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Acme|Roboto" rel="stylesheet">
+</head>
+<body>
+    <h1>Template Literals</h1>
+    
+    <p class="intro">Template literals are very similar to string literals, but they use backticks (`) instead of single quotes (') or double quotes (").</p>
+    
+    <h2>Basic</h2>
+    <div>
+        <div class="basic"></div>
+    </div>
+    
+    <h2>Multi-line</h2>
+    <div>
+    <h3>Fruits</h3>
+    <div class="fruits"></div>
+    
+    <h3>Vegetables</h3>
+    <div class="vegetables"></div>
+    </div>
+
+    <h2>Interpolation</h2>
+    
+    <p class="intro">Template literals get their name from their ability to evaluate expressions.
+    Think of a form letter template with blanks to hold names or numbers that can be filled in later:
+    "Dear ______, Thank you for your business on ______! Sincerely, Management" Similarly, 
+    values can be filled, or interpolated, into template literals, to be evaluated when the program runs.</p>
+    
+    <p class="intro">Forgetting to include spaces is a common mistake that is made with concatenating strings together. 
+    Using template literals and placeholders instead makes it less cluttered and mistakes easier to see.</p>
+    
+    <p class="intro">You can pass any kind of expression, even a function expression, into these curly brackets.</p>
+    
+    <div>
+        <div class="interpolation1"></div>
+        <div class="interpolation2"></div>
+    </div>
+    
+    <script>
+        
+        // BASIC
+        
+        // Single Quotes string literal
+        const singleQuotes = '<p>Single quotes</p>';
+        
+        // Double Quotes string literal
+        const doubleQuotes = "<p>Double quotes</p>";
+        
+        // Template literal string
+        const templateLiteral = "<p>Template literal</p>";
+        
+        // String literals are added to result variable
+        const result = singleQuotes + doubleQuotes + templateLiteral;
+        
+        /* Selects the element with the class of basic 
+        and adds the contents of the result variable as innerHTML */
+        document.querySelector('.basic').innerHTML = result;
+        
+        
+        // MULTILINE
+        
+        // Multi-line string literal
+        const fruitList = 
+            "<ul>" +
+                "<li>Kiwi</li>" +
+                "<li>Lime</li>" +
+                "<li>Pineapple</li>" +
+            "</ul>";
+        
+        /* Multi-line template literal
+        Only one backtick is required at the beginnng and the end.
+        All the other quotes and pluses can be deleted. */
+        const vegetableList = `
+            <ul>
+                <li>Potato</li>
+                <li>Onion</li>
+                <li>Broccoli</li>
+            </ul>
+        `;
+        
+        /* Selects the element with the class of fruits 
+        and adds the contents of the fruitList variable as innerHTML */
+        document.querySelector('.fruits').innerHTML = fruitList;
+        
+        /* Selects the element with the class of vegetables 
+        and adds the contents of the vegetableList variable as innerHTML */
+        document.querySelector('.vegetables').innerHTML = vegetableList;
+        
+        
+        // INTERPOLITION
+        // Function using basic strings
+        function like(thing) {
+          return 'I like ' + thing;
+        }
+        
+        /* Function using a template literal.
+        The dollar sign with curly brackets are used to 
+        mark the dynamic values in the template literal.
+        When the program runs, the contents of the curly brackets 
+        are evaluated and placed, or interpolated, into the string.*/
+        function love(thing) {
+          return `I love ${thing}`;
+        }
+        
+        // Variable to hold sentence constructed using template literal
+        const sentence1 = '<p>' + like('apples') + ', but' + love('oranges') + '.</p>';
+        
+        // Variable to hold sentence constructed using template literal
+        // Note the function espression passed in the curly brackets
+        const sentence2 = `<p>${like(`apples`)}, but ${love('oranges')}.</p>`;
+        
+        /* Selects the element with the class of interpolation1 
+        and adds the contents of the sentence variable as innerHTML */
+        document.querySelector('.interpolation1').innerHTML = sentence1;
+        
+        /* Selects the element with the class of interpolation2 
+        and adds the contents of the sentence variable as innerHTML */
+        document.querySelector('.interpolation2').innerHTML = sentence2;
+
+    </script>
+
+</body>
+</html>

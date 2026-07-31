@@ -1,0 +1,106 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Understanding "this" in JavaScript</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+    
+    <h1>Understanding "this" in JavaScript</h1>
+    
+    <p>View Page Source for example code in the script tags below.</p>
+        
+    <p>View the console for the output of the code.</p>
+   
+    <script>
+       
+        // "this" in a normal function call
+        
+        function helloWorld() {
+          console.log("Hello world!");
+          console.log(this);
+        };
+        
+        // "this" within methods on objects
+        
+        helloWorld();
+    </script>
+        
+    <script>
+        
+        // "this" within methods on objects
+      
+        var Portland = {
+            bridges: 12,
+            airport: 1,
+            soccerTeams: 1,
+            logNumberOfBridges: function() {
+                console.log("There are " + this.bridges + " bridges in Portland!")
+            }  
+        }
+        
+        function logTeams() {
+            console.log(this.soccerTeams);
+        }
+        
+        Portland.logNumberOfBridges();
+        
+        Portland.foo = logTeams;
+        
+        Portland.foo();
+
+    </script>
+        
+    <script>
+        
+        // "this" within an object that has been constructed
+        
+        var City = function(name, state) {
+            this.name = name || 'Portland';
+            this.state = state || 'Oregon';
+            this.printMyCityAndState = function() {
+              console.log("My city is " + this.name + ", and my state is " + this.state);
+            };
+        };
+        
+        portland = new City();
+        seattle = new City('Seattle', 'Washington');
+        salem = new City('Salem');
+        vancouver = new City('Vancouver', 'Washington');
+        london = new City('London', 'the UK');
+        
+        portland.printMyCityAndState();
+        seattle.printMyCityAndState();
+        salem.printMyCityAndState();
+        vancouver.printMyCityAndState();
+        london.printMyCityAndState();
+        
+        var Stadium = function(name, city) {
+            this.name = name || 'Wembley';
+            this.city = city || 'London';
+            this.printMyStadiumAndCity = function() {
+              console.log(this.name + " is a stadium in " + this.city);
+            };
+        };
+        
+        wembley = new Stadium();
+        superdome = new Stadium('The Superdome', 'New Orleans');
+        
+        wembley.printMyStadiumAndCity();
+        superdome.printMyStadiumAndCity();
+
+    </script>
+    
+    
+    
+
+  </body>
+</html>

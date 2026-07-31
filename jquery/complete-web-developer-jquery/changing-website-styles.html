@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        
+        <title>Changing website content | jQuery | The Complete Web Developer Course 2.0</title>
+        
+        <style>
+            
+            div {
+                margin: 50px;
+            }
+        
+            .circle {
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+            }
+            
+            .square {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .green {
+                background-color: green;
+            }
+            
+            .red {
+                background-color: red;
+            }
+            
+            .blue {
+                background-color: blue;
+            }            
+
+        </style>
+        
+    </head>
+
+    <body>
+                
+        <div class="green circle"></div>
+        
+        <div class="red square"></div>
+        
+        <div class="blue square"></div>
+        
+        <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        
+        <script type="text/javascript">
+       
+            
+            $('.square').click(function() {
+                $(this).css("backgroundColor", "yellow")
+                alert($(this).css("backgroundColor"));
+            });
+            
+            $('.circle').click(function() {
+                alert($('.circle').css("backgroundColor"));
+                alert($('body').css("width"));
+                $('.circle').css("width", "300px");
+                $('.circle').css("backgroundColor", "red");
+            });     
+ 
+        </script>
+        
+    </body>
+
+</html>

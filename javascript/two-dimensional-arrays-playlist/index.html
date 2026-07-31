@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Musical Playlist With Song and Artist</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+        
+    <h1>My Music Playlist with Song and Artist</h1>
+        
+    <p>The list below was created with JavaScript from a two-dimensional array using functions and loops.</p>
+    
+    <div id="listDiv">
+    
+    </div>
+        
+    <script>
+        
+        // Two-dimensional array containing a song title and a performer
+        var playList = [
+            ['I Did It My Way', 'Frank Sinatra'],
+            ['Respect', 'Arethea Franklin'],
+            ['Imagine', 'John Lennon'],
+            ['Born to Run', 'Bruce Sprinsteen'],
+            ['Louie Louie', 'The Kingsmen'],
+            ['Maybellene', 'Chuck Berry']
+        ];
+        
+        // Function to display a message to the screen
+        function display(message) {
+          document.write(message);
+        }
+        
+        /* Function (with the parameter songs)
+            creates a string variable which begins an ordered list.
+            For Loop adds list items via the songs parameter.
+                with the song at position [0]
+                and the performer at postion [1]
+            The ordered list is closed.
+            The display function is called 
+            (and the string variable is added as an argument)
+        */
+        function displaySongs(songs) {
+          var listHTML = '<ol>';
+          for ( var i = 0; i < songs.length; i += 1) {
+            listHTML += '<li>' + songs[i][0] + ' by ' + songs[i][1] + '</li>';
+          }
+          listHTML += '</ol>';
+          display(listHTML);
+        }
+        
+        /* displaySongs function is called (and the playList array 
+        is passed into it as an argument) */
+        displaySongs(playList);
+     
+    </script>
+        
+</body>
+</html>

@@ -1,0 +1,68 @@
+/* ===================================== 
+   Grid Layout
+======================================== */
+
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 100px minmax(200px, 1fr) 100px; 
+  grid-gap: 10px;
+}
+
+.container-1 {
+    grid-template-areas:
+        "header header"
+        "main aside"
+        "footer footer";
+}
+
+.container-2 {
+    grid-template-areas:
+        "header header"
+        "main aside"
+        "footer aside";
+}
+
+.container-3 {
+    grid-template-areas:
+        "header header"
+        "main aside"
+        "main footer";
+}
+
+.container-4 {
+    grid-template-areas:
+        "header ..."
+        "main aside"
+        ". footer";
+        /* ou're able to use one or any number of dots to represent an empty grid cell */
+}
+
+.header-1,
+.header-2,
+.header-3,
+.header-4 {
+    grid-area: header;
+}
+
+.main-1,
+.main-2, 
+.main-3,
+.main-4 {
+    grid-area: main;
+}
+
+.aside-1,
+.aside-2,
+.aside-3,
+.aside-4 {
+    grid-area: aside;
+}
+
+.footer-1,
+.footer-2,
+.footer-3,
+.footer-4 {
+    grid-area: footer;
+}

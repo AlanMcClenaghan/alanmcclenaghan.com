@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Disappearing Circles</title>
+
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+
+      .circle {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        float: left;
+        margin: 25px;
+      }
+
+      #red {
+        background-color: red;
+      }
+
+      #blue {
+        background-color: blue;
+      }
+
+      #green {
+        background-color: green;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Disappearing Circles</h1>
+
+    <p>
+      Click the circles to make them disappear. Refresh to make them reappear.
+    </p>
+
+    <div id="red" class="circle"></div>
+    <div id="blue" class="circle"></div>
+    <div id="green" class="circle"></div>
+
+    <script>
+      var red = document.getElementById("red");
+      var blue = document.getElementById("blue");
+      var green = document.getElementById("green");
+
+      document.getElementById("red").onclick = function() {
+        red.style.display = "none";
+      };
+
+      document.getElementById("blue").onclick = function() {
+        blue.style.display = "none";
+      };
+
+      document.getElementById("green").onclick = function() {
+        green.style.display = "none";
+      };
+    </script>
+  </body>
+</html>

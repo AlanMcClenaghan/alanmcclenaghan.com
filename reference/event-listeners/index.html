@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+    crossorigin="anonymous">
+  <title>DOM Manipulaton & Events - Event Listeners & The Event Object</title>
+</head>
+
+<body>
+  <div class="container">
+      <h1>DOM Manipulaton & Events - Event Listeners & The Event Object</h1>
+      <p>View Page Source for example code in the script tags below.</p>      
+      <p>View the console for the output of the code.</p>
+    <div class="row">
+      <div class="col s12">
+        <div id="main" class="card">
+          <div class="card-content">
+            <span class="card-title">Task List</span>
+            <div class="row">
+              <form id="task-form">
+                <div class="input-field col s12">
+                  <input type="text" name="task" id="task" value="Walk the dog">
+                  <label for="task">New Task</label>
+                </div>
+            </div>
+            <input type="submit" value="Add Task" class="btn">
+            </form>
+          </div>
+          <div class="card-action">
+            <h5 id="task-title">Tasks</h5>
+            <ul class="collection">
+              <li class="collection-item">
+                List Item
+                <a href="#" class="delete-item secondary-content">
+                  <i class="fa fa-remove"></i>
+                </a>
+              </li> 
+              <li class="collection-item">
+                List Item
+                <a href="#" class="delete-item secondary-content">
+                  <i class="fa fa-remove"></i>
+                </a>
+              </li> 
+              <li class="collection-item">
+                List Item
+                <a href="#" class="delete-item secondary-content">
+                  <i class="fa fa-remove"></i>
+                </a>
+              </li>
+              <li class="collection-item">
+                List Item
+                <a href="#" class="delete-item secondary-content">
+                  <i class="fa fa-remove"></i>
+                </a>
+              </li>
+              <li class="collection-item">
+                List Item
+                <a href="#" class="delete-item secondary-content">
+                  <i class="fa fa-remove"></i>
+                </a>
+              </li>
+            </ul>
+            <a class="clear-tasks btn black" href="">Clear Tasks</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script>
+
+    // EVENT LISTENERS AND THE EVENT OBJECT
+
+    // Anonymous function as second parameter
+    document.querySelector('.btn').addEventListener('click', function(event){
+        event.preventDefault();
+        console.log('Hello World!')
+        
+    });
+
+    // Named function as second parameter
+    document.querySelector('.clear-tasks').addEventListener('click', onClick);
+
+    function onClick(event) {
+        event.preventDefault();
+        console.log('clicked')
+
+        let val;
+
+        // Event object
+        val = event;
+        console.log(val);
+
+        // Event target element
+        val = event.target;
+        console.log(val);
+
+        event.target.id = 'event';
+        val = event.target.id;
+        console.log(val);
+
+        val = event.target.className;
+        console.log(val);
+
+        val = event.target.classList;
+        console.log(val);
+
+        event.target.innerText = 'Clicked';
+
+        // Event Type
+        val = event.type;
+        console.log(val);
+
+        // Timestamp
+        val = event.timeStamp;
+        console.log(val);
+
+        // Coordinates of event relative to window
+        val = event.clientY;
+        console.log(val);
+
+        val = event.clientX;
+        console.log(val);
+
+        // Coordinates of event relative to the event
+        val = event.offsetY;
+        console.log(val);
+
+        val = event.offsetX;
+        console.log(val);
+    };
+  
+  </script>
+  <script src="event-listeners.js"></script>
+</body>
+
+</html>

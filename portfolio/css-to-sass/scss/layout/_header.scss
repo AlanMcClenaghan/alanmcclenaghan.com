@@ -1,0 +1,57 @@
+.name {
+  @media #{$brk-wide} {
+    float: left;
+  }
+}
+
+.main {
+  
+  &-nav {
+    @media #{$brk-wide} {
+      float: right;
+      margin-top: 43px;
+      margin-right: 3%;
+      padding: 0;
+    }  
+  }
+
+  &-nav li {
+    @media #{$brk-narrow} {
+      display: inline-block;
+      margin: 0 20px;
+    }
+    @media #{$brk-wide} {
+      margin: 0;
+    }
+  }
+
+  &-nav a {
+    display: block;
+    @extend %none;
+    background-color: $white-background;
+    @extend %w90;
+    margin: 0 5% 7px;
+    padding: 10px;
+    color: $text-color-body; 
+    @media #{$brk-narrow} {
+      display: inline;
+      padding: 15px;
+      background-color: $background-color;
+    }
+  }
+
+}
+
+a {
+  
+  & {
+    @media #{$brk-wide} {
+      padding: 20px;
+    }
+  }
+
+  &:hover {
+    color: $anchor;
+  }
+
+}

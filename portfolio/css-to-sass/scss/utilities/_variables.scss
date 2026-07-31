@@ -1,0 +1,21 @@
+//Media query breakpoints
+
+$brk-narrow : '(min-width: 768px)';
+$brk-wide   : '(min-width: 1024px)';
+
+// Color variables
+
+$text-color-body  : #4a4a4a;
+$text-color-par   : #7f7f7f;
+$background-color : aquamarine;
+$anchor           : #a7a7a7;
+$lightgrey-fill   : #eee;
+$white-text       : white;
+$white-background : white;
+$white-border     : white;
+
+// Font stack
+
+$stack-sans-serif : sans-serif;
+$stack-roboto     : 'Roboto', $stack-sans-serif;
+$stack-archivo    : 'Archivo Black', $stack-sans-serif;

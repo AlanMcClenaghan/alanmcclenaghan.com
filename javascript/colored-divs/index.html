@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Colored Divs</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body id="color">
+    <h1>Colored div generator</h1>
+    <p>The linked JavaScript file uses variables, functions and a for loop to create a set number of randomly colored divs and print them to the screen.</p>
+    <p>Refresh the screen to change the color of the divs.</p>
+    <script>
+        
+        // Global variables
+        var html = '';
+        var rgbColor;
+        
+        // Function generates random a number between 0 and 255 
+        function randomRGB() {
+            return Math.floor(Math.random() * 256 );
+        }
+
+        // Function creates string variable containing RGB color values
+        function randomColor() {
+            var color = "rgb(";
+            color += randomRGB() + ",";
+            color += randomRGB() + ",";
+            color += randomRGB() + ")";
+            return color;
+        }
+
+        // Function to print colored divs to the page 
+        function print(html) {
+            document.write(html);
+        }
+
+        /*
+        For loop assigns randomColor() function to rgbColor variable
+        qwhich passes RGB color values into the html string variable.
+        */
+        for ( var i = 0; i < 100; i++) {
+            rgbColor = randomColor();
+            html += '<div style="background-color:' + rgbColor + '"></div>';
+        }
+
+        //Print function is called
+        print(html)
+
+    </script>
+ 
+<!--    <script src="js/script.js"></script>-->    
+    
+</body>
+</html>

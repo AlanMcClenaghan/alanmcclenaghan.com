@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Arrow Function Syntax</title>
+    </head>
+    <body> 
+        
+        <h1>Arrow Functions</h1>
+
+        <p>View Page Source for examples of converting Function Declarations into Arrow Function Expressions.<p>
+        
+        <p>If your Arrow Function only takes a single argument you don't need parentheses.<p>
+        
+        <p>You can't remove parentheses on functions with no or multiple arguments.<p>
+
+
+        <p>If you're using only one line of code, you don't need the return keyword.<p>
+
+        <p>It will always return the value of the statement without the use of the return keyword.<p>
+
+        <p>You can reduce the Arrow syntax further by removing the curly braces 
+        when you only have a single line of code in your Arrow Function.<p>
+
+        <script>
+            
+            // Functions with no arguments
+            
+                const name = "Alan";
+    
+                /*
+                
+                Function declaration, no argument
+                
+                function sayName() {
+                    const message = "My name is " + name;
+                    console.log(message);
+                }
+                */
+                
+                // Arrow function expression, no argument
+                
+                const sayName = () => {
+                    const message = "My name is " + name;
+                    console.log(message);
+                }
+                
+                /*
+                
+                Function declaration, no argument
+                
+                function sayBye() {
+                  console.log("Bye " + name);  
+                }
+                */
+                
+                // Arrow function expression, no argument
+                
+                const sayBye = () => {
+                  console.log("Bye " + name);  
+                }
+                
+                // Arrow function, no argument, concise
+    
+                const sayBye = () => console.log("Bye " + name);
+            
+            
+            
+            
+            
+            // Functions with single argument
+            
+                /*
+    
+                Function declaration, single argument
+                
+                
+                function square(x) {
+                    return x * x;
+                }
+                */
+                
+                // Arrow function expression, single argument
+                
+                const square = (x) => {
+                    return x * x;
+                }
+                
+                // Arrow function expression, single argument, concise
+                
+                const square = x => x * x;
+                
+                /*
+                
+                Function declaration, single argument
+                
+                function cube(x) {
+                    return square(x) * x;
+                }
+                */
+                
+                // Arrow function expression, single argument
+                
+                const cube = (x) => {
+                    return square(x) * x;
+                }
+                
+                
+                // Arrow function expression, single argument, concise
+                
+                const cube = x => square(x) * x;
+                
+                
+            // Functions with multiple arguments
+                
+                
+                /*
+    
+                Function declaration, multiple arguments
+                
+                function multiply(x, y) {
+                    return x * y;
+                }
+                */
+                
+                // Arrow function expression, multiple arguments
+                
+                const multiply = (x, y) => {
+                    return x * y;
+                }
+                
+                // Arrow function expression, multiple arguments, concise
+                
+                const multiply = (x, y) => x * y;
+                
+                /*
+                
+                Function declaration, multiple arguments
+                
+                function add(a, b) {
+                    return a + b;
+                }
+                */
+                
+                // Arrow function expression, multiple arguments
+                
+                const add = (a, b) => {
+                    return a + b;
+                }
+                
+                // Arrow function, multiple arguments, concise
+                
+                const add = (a, b) => a + b;
+                
+                /*
+                
+                Function declaration, multiple arguments
+                
+                function subtract(a, b) {
+                    return a - b;
+                }
+                */
+                
+                // Arrow function expression, multiple arguments
+                
+                const subtract(a, b) => {
+                    return a - b;
+                }
+                
+                // Arrow function expression, multiple arguments, concise
+                
+                const subtract(a, b) => a - b;
+                
+            
+            // Functionally the same
+            
+            
+                //Function Declaration
+    
+                function divide1(a, b) {
+                  return a / b; 
+                }
+                
+                //Function Expression
+                
+                const divide2 = function(a, b) {
+                  return a / b;
+                }
+                
+                //Arrow Function Expression
+                
+                const divide3 = (a, b) => {
+                  return a / b;
+                }
+                
+                //Arrow Function Expression - concise
+    
+                const divide4 = (a, b) => a / b;
+        
+        
+        </script>
+   
+    </body>
+</html>

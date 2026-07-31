@@ -1,0 +1,139 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Array Iteration</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+</head>
+<body>
+    
+    <h1>Array Iteration using forEach()</h1>
+    
+    <p>View Page Source for example code in the script tags below.</p>
+        
+    <p>View the console for the output of the code.</p>
+   
+    <script>
+       
+        const fruits = ['apple', 'pear', 'cherry'];
+        let capitalisedFruits = [];
+        const prices = [6.75, 3.10, 4.00, 8.12]; // Total: 21.97
+        let totalPrice = 0;
+        const names = ['Selma', 'Ted', 'Mike', 'Sam', 'Sharon', 'Marvin'];
+        let namesBeginningWithS = []
+        const numbers = [1,2,3,4,5,6,7,8,9,10];
+        let times10 = [];
+        
+        for ( let i = 0; i < fruits.length; i++ ) {
+            console.log(fruits[i]);
+        }
+        
+        fruits.forEach( fruit => console.log(fruit) );
+        
+        fruits.forEach( fruit => console.log(fruit.toUpperCase()) );
+        
+        fruits.forEach( fruit => {
+           let capitalisedFruit = fruit.toUpperCase();
+           capitalisedFruits.push(capitalisedFruit);
+        });
+        
+        console.log(capitalisedFruits);
+        
+        prices.forEach( price => totalPrice += price );
+        
+        console.log(totalPrice);
+        
+        names.forEach((name, index) => console.log(`${index + 1}) ${name}`));
+        
+        names.forEach( name => {
+           if ( name[0] === 'S' ) {             /* name.charAt(0) also works */
+           namesBeginningWithS.push(name);
+           }
+        });
+        
+        console.log(namesBeginningWithS);
+        
+        namesBeginningWithS.forEach((name, index) => console.log(`${index + 1}) ${name}`));
+        
+        numbers.forEach( number => {
+           let numbertimes10 = number * 10;
+           times10.push(numbertimes10);
+        });
+        
+        
+        
+        // Practice forEach in JavaScript
+        
+        const moreNumbers = [1, 2, 3, 4, 5];
+        let total = 0;
+        
+        moreNumbers.forEach( number => total += number);
+        console.log(total);        
+        
+        
+        const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        let dayAbbreviations = [];
+        
+        days.forEach( day => dayAbbreviations.push(day.substr(0,2)));
+     
+        console.log(dayAbbreviations);
+        
+        
+        const stringPrices = ['5.47', '3.12', '8.00', '5.63', '10.70'];
+        let priceTotal = 0;
+        
+        stringPrices.forEach( price => priceTotal += parseFloat(price) );
+        
+        console.log(priceTotal);
+        
+        
+        const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+        let noel = [];
+        
+        alphabet.forEach( letter => {
+            if ( letter !== 'L' ) {
+                noel.push(letter)
+            }
+        });
+             
+        console.log(noel);
+        
+        
+        const percentages = [34, 67, 12, 39, 90, 82, 22, 24, 99];
+        let upperRange = [];
+        
+        percentages.forEach( percentage => {
+            if ( percentage > 50 ) {
+                upperRange.push(percentage)
+            }
+        });
+        
+        console.log(upperRange);
+        
+        
+        const colors = ['#87E2D0', '#559F4D', '#FFE0F4', '#7E7E7E', '#FF2D2D', '#F7FFEC'];
+        let filteredColors = [];
+        
+        colors.forEach( color => {
+            if ( color[1].toUpperCase() === 'F' ) {
+                filteredColors.push(color);
+            }
+        });
+        
+        console.log(filteredColors);
+        
+        const months = ['january', 'february', 'march', 'april', 'may'];
+        let capitalizedMonths = [];
+        
+        months.forEach( month => capitalizedMonths.push( month.toUpperCase() ) );
+        
+        console.log(capitalizedMonths);
+
+    </script>
+    
+  </body>
+</html>

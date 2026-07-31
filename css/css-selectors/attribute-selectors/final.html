@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Selectors</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/base-style.css">
+    <link rel="stylesheet" href="css/selectors.css">
+    <style>
+        /* Attribute Selectors ------------- */
+
+        /* form[class="form-contact"] attibute selector
+        but it would be best just to use the class selector */
+
+        .form-contact {
+            padding: 20px 24px;
+            background: #f4f7f8;
+        }
+
+        /* div[id="container"] attibute selector
+        but it would be best just to use the ID selector */
+
+        #container {
+            max-width: 500px;
+            margin: auto;
+        }
+
+        /* attribute selectors come in handy when styling form elements */
+
+        input[type="email"] {
+            background: #fdfee6;
+        }
+
+        /*
+        input[type="button"],
+        input[type="reset"],
+        input[type="submit"] {
+            cursor: pointer;
+        }
+        */
+        
+        a[target="_blank"] {
+            color: #39add1;
+            text-decoration: none;
+            border-bottom: 1px dotted;
+        }
+        
+        
+        /* Combinator Selectors ------------- */
+
+        /* The > combinator targets a direct child of an element */
+        
+        form > a {
+            font-size: .7em;
+        }
+        
+        /* The + combinator targets an element's immediate sibling  */
+        
+        
+        /* The ~ combinator targets all the specified siblings that follow an element */
+        
+        h1 ~ label {
+            background-color: tomato;
+            color: white;
+            padding: 5px;
+        }
+        
+        /* DRY Classes ------------- */
+    
+        .br {
+            border-radius: .5em;
+        }
+        
+        .avatar {
+            display: block;
+            margin: 0 auto 2em;
+        }
+        
+        .rounded {
+            border-radius: 50%;
+        }
+        
+        .btn {
+            cursor: pointer;
+            font-size: .875em;
+            font-weight: 400;
+            color: #fff;
+            padding-left: 20px;
+            padding-right: 20px;
+            text-transform: uppercase;
+        }
+        
+        .btn:hover {
+            opacity: .75;
+        }
+
+        .default {
+            background-color: #52bab3;
+        }
+        
+        .error {
+            background-color: #ff784f;
+        }
+        
+        
+        /* Media queries ------------- */
+        
+        @media (min-width: 769px) {
+            .inline {
+                width: auto;
+                display:  inline-block;
+            }
+            
+            /* Combinator Selectors ------------- */
+                
+            /* The + combinator targets an element's immediate sibling  */
+        
+            .btn + .btn {
+                margin-left: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+	<div id="container">
+        <h1>CSS Selectors</h1>
+        
+        <h2>1. Selectors &ndash; Beyond the Basics</h2>
+        
+        <p>Inspect the head element for use of Attribute Selectors, DRY CSS, Child, Adjacent, and General Sibling Combinators.</p>
+        
+		<form class="form-contact br">
+	  	<h1>Contact</h1>
+
+		  <label for="name">Name:</label> 
+		  <input type="text" id="name">
+
+     	<label for="email">Email:</label>
+     	<input type="email" id="email" placeholder="email@website.com">
+  
+     	<label for="msg">Message:</label>
+     	<textarea id="msg" rows="7"></textarea>
+
+		  <input type="submit" value="Submit" class="btn inline default">
+ 		  <input type="reset" value="Reset" class="btn inline error"> 
+		</form>
+		
+		<hr>
+ 		<img src="img/avatar.png" alt="Mountains" class="avatar rounded">
+		
+		<form class="form-login">
+			<label for="username">Username:</label> 
+			<input type="text" id="username">
+
+			<label for="password">Password:</label>
+			<input type="password" id="password">
+     
+			<input type="submit" value="Login" class="btn default">
+      <a href="#" target="_blank">Forgot your password?</a> 
+		</form>
+	</div>
+</body>
+</html>

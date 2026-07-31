@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS Grid Layout</title>
+        <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+        <link href="css/page.css" rel="stylesheet">
+        <link href="css/grid.css" rel="stylesheet">
+    </head>
+    <body>
+        
+        <h1> CSS Grid Layout</h1>
+        
+        <p>The display: grid rule creates a grid container
+        and makes its contents grid items.</p>
+        
+        <p>The grid-template-columns property creates columns in your grid.</p>
+        
+        <p>The grid-template-rows property creates rows in your grid.</p>
+        
+        <p>Separate grid tracks using the grid-row-gap and grid-column-gap properties.
+        grid-gap is the shorthand property</p>
+        
+        <div class="grid grid-1">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+        </div>
+        
+        <p>Grid layout introduces a new length unit, fr (or fraction), a flexible unit designed for creating grid tracks that expand and contract based on the free space in the grid.</p>
+        
+        <div class="grid grid-2">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+        </div>
+        
+        <p>The CSS Grid repeat() function saves you time and helps keep your CSS maintainable. repeat() offers a shortcut for repeating patterns of tracks, which keeps you from having to write the same values over and over again.</p>
+        
+        <div class="grid grid-3">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+            <div class="item">7</div>
+            <div class="item">8</div>
+        </div>
+        
+        <p>One of the most useful features in Grid Layout is the minmax() function. minmax() lets you set a grid track's minimum and maximum size.</p>
+        
+        <div class="grid grid-4">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+        </div>
+        
+        <p>The minmax() function can be used with the repeat() function</p>
+        
+        <div class="grid grid-5">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+        </div>
+        
+        <p>Grid layout lets you set items to automatically wrap and adjust to fit their container's width. This lets you create designs that respond to different browser widths.</p>
+            
+        <p>The Grid Layout repeat notation supports two keywords -- auto-fill and auto-fit -- to help with this.</p>
+        
+        <p>auto-fill generates as many columns as necessary to fit the items within the grid container width even if it means generating empty tracks.</p>
+        
+        <div class="grid grid-6">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+            <div class="item">7</div>
+            <div class="item">8</div>
+        </div>
+        
+        <p>Auto-fit collapses any empty tracks down to zero pixels so grid items can expand to take up the remaining space.</p>
+        
+        <div class="grid grid-7">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+            <div class="item">7</div>
+            <div class="item">8</div>
+        </div>
+        
+        <p>auto-fit allows you to create a flexible, 
+        three-column layout in wide viewports,
+        a two-column layout in medium viewport, 
+        and a one column layout out in small screens 
+        without having to use media queries.</p>
+        
+        <div class="grid grid-8">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+        </div>
+        
+        <p>When you create a grid layout with the grid-template-rows and grid-template-columns properties, you are defining what's called an "explicit grid".</p>
+        
+        <p>Grid Layout also provides an "implicit grid."</p>
+            
+            
+        <p>The implicit grid is automatically generated by the grid container to position any extra items outside of the explicit grid.</p>
+        
+        <p>CSS Grid provides a simple and automated way to control the size and position of implicit tracks.</p>
+        
+        <p>The grid-auto-rows property controls the size of implicit row tracks</p>
+        
+        <div class="grid grid-9">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+            <div class="item">7</div>
+            <div class="item">8</div>
+            <div class="item">9</div>
+            <div class="item">10</div>
+            <div class="item">11</div>
+            <div class="item">12</div>
+        </div>
+        
+        <p>grid-auto-columns controls implicit column tracks.</p>
+        
+        <p>The default value for grid-auto-flow is row. 
+        To switch them to columns, set the value to column</p>
+        
+        <div class="grid grid-10">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+            <div class="item">7</div>
+            <div class="item">8</div>
+            <div class="item">9</div>
+            <div class="item">10</div>
+            <div class="item">11</div>
+            <div class="item">12</div>
+        </div>
+        
+        
+    </body>
+</html>

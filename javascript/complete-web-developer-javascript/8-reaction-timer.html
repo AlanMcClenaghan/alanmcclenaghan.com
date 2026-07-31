@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Reaction Timer</title>
+  </head>
+
+  <style type="text/css">
+    body {
+      font-family: sans-serif;
+    }
+
+    .bold {
+      font-weight: bold;
+    }
+
+    #shape {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      display: none;
+      position: relative;
+    }
+  </style>
+
+  <body>
+    <h1>Test Your Reactions</h1>
+
+    <p>Click on the shapes as fast as you can:</p>
+
+    <div class="bold">Your time: <span id="time-taken"></span></div>
+
+    <div id="shape"></div>
+
+    <script type="text/javascript">
+      var start = new Date().getTime();
+
+      var shape = document.getElementById("shape");
+
+      var timeTaken = document.getElementById("time-taken");
+
+      function getRandomColor() {
+        var letters = "0123456789ABCDEF".split("");
+        var color = "#";
+        for (var i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+        console.log(color);
+      }
+
+      function makeShapeAppear() {
+        var top = Math.random() * 400;
+        var left = Math.random() * 400;
+        var size = Math.random() * 100 + 100;
+
+        if (Math.random() > 0.5) {
+          shape.style.borderRadius = "50%";
+        } else {
+          shape.style.borderRadius = "0";
+        }
+
+        shape.style.display = "block";
+        shape.style.top = top + "px";
+        shape.style.left = left + "px";
+        shape.style.height = size + "px";
+        shape.style.width = size + "px";
+        shape.style.backgroundColor = getRandomColor();
+        start = new Date().getTime();
+      }
+
+      function appearAfterDelay() {
+        setTimeout(makeShapeAppear, Math.random() * 2000);
+      }
+
+      appearAfterDelay();
+
+      shape.onclick = function() {
+        var end = new Date().getTime();
+
+        shape.style.display = "none";
+
+        var time = (end - start) / 1000;
+
+        timeTaken.textContent = time + " seconds";
+
+        appearAfterDelay();
+      };
+    </script>
+  </body>
+</html>

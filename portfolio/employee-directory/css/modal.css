@@ -1,0 +1,63 @@
+/*==================================== 
+Modal Window styles
+=====================================*/
+
+.modal__overlay {
+  background: rgba(0, 0, 0, 0.5);
+  bottom: -250px;
+  left: 0;
+  position: fixed;
+  right: 10px;
+  text-align: center;
+  top: 0;
+  z-index: 1000;
+}
+
+.modal__wrap {
+  border-radius: .5em;
+  background: white;
+  padding: 1em 0;
+  position: relative;
+  margin: 0 auto;
+  max-width: 500px;
+  width: 90%;
+}
+
+@media (min-height: 37.5em) {
+  .modal__wrap {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -80%);
+  }
+}
+
+.x {
+  cursor: pointer;
+  height: 1.5em;
+  line-height: 1.5;
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  width: 1em;
+}
+
+/*==================================== 
+  Our Modal action styles
+=====================================*/
+ 
+.modal input {
+  position: absolute;
+  top: -1000px;
+}
+
+.modal__overlay {
+  opacity: 0;
+  z-index: -100;
+}
+
+input:checked ~ .modal__overlay {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 800;
+}

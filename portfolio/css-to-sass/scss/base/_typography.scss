@@ -1,0 +1,36 @@
+h1 {
+  @include text(1.75em);
+  font-family: $stack-archivo;
+  margin: 20px 0 20px 0;
+  padding: 10px;
+  @media #{$brk-wide} {
+    margin: 36px 5%;
+    padding: 0;
+  } 
+}
+
+h2,
+a {
+  @include text(1.4em, $weight:bold);
+  text-transform: uppercase;
+}
+
+h2 {
+  margin-bottom: 50px;
+}
+
+h3 {
+  @include text(1.6em, $weight:400);
+}
+
+h4,
+h4 a {
+  @include text(0.9em);
+  font-family: $stack-archivo;
+}
+
+p {
+  @include text(1.3em, $weight:lighter);
+  color: $text-color-par;
+  padding: 0 5%;
+}

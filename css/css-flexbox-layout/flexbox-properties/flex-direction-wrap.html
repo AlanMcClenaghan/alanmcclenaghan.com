@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Flexbox Layout</title>
+	<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/page.css">
+	<style>
+        
+    .flex {
+        display: flex;
+    }
+        
+    .row-reverse {
+        flex-direction: row-reverse;
+    }
+    
+    .column {
+        flex-direction: column;
+    }
+        
+    .column-reverse {
+        flex-direction: column-reverse;
+    }
+        
+    .height250 {
+        height: 250px;
+    }
+        
+   .wrap {
+        flex-wrap: wrap;
+    }
+         
+    </style>
+</head>
+<body>
+    <h1>Flexbox:</h1>
+    
+    <h2>flex, flex-direction and wrap</h2>
+    
+    <p>Control the direction of your flexbox layout, with the flex-direction property</p>
+    
+    <p>Some flexbox properties apply to the flex container only, while some apply only to the flex items.</p>
+    
+    <p>The flex-direction property applies to the flex container only.</p>
+    
+    <p>The default value for flex-direction is row.</p>
+    
+    <h3>container {display: flex}</h3>
+	<div class="container flex">
+		<div class="item-1 item">Item 1</div>
+		<div class="item-2 item">Item 2</div>
+		<div class="item-3 item">Item 3</div>
+		<div class="item-4 item">Item 4</div>
+		<div class="item-5 item">Item 5</div>
+		<div class="item-6 item">Item 6</div>
+	</div>
+    
+    <p>To reverse the direction flex items in a row, use the value row-reverse.</p>
+    
+    <h3>container {display: flex; flex-direction: row-reverse}</h3>
+	<div class="container flex row-reverse">
+		<div class="item-1 item">Item 1</div>
+		<div class="item-2 item">Item 2</div>
+		<div class="item-3 item">Item 3</div>
+		<div class="item-4 item">Item 4</div>
+		<div class="item-5 item">Item 5</div>
+		<div class="item-6 item">Item 6</div>
+	</div>
+    
+    <p>The value column rotates the main axis so that flex items are laid out vertically.</p>
+    
+    <h3>container {display: flex; flex-direction: column}</h3>
+	<div class="container flex column">
+		<div class="item-1 item">Item 1</div>
+		<div class="item-2 item">Item 2</div>
+		<div class="item-3 item">Item 3</div>
+	</div>
+    
+    <p>The flex container can break flex items onto multiple lines and allow them to wrap as needed.</p>
+    
+    <p>With the flex-wrap property, you can control whether the flex container is a single-line or multi-line layout.</p>
+    
+    <p>The flex-wrap property is for flex containers only.</p>
+    
+    <p>With the flex-wrap property, you can control whether the flex container is a single-line or multi-line layout.</p>
+    
+    <p>The value wrap breaks the flex items into multiple lines.</p>
+    
+    <h3>container {display: flex; flex-wrap: wrap}</h3>
+    
+	<div class="container flex wrap">
+		<div class="item-1 item">Item 1</div>
+		<div class="item-2 item">Item 2</div>
+		<div class="item-3 item">Item 3</div>
+		<div class="item-4 item">Item 4</div>
+		<div class="item-5 item">Item 5</div>
+		<div class="item-6 item">Item 6</div>
+	</div>
+    
+    <h3>container {display: flex; flex-direction: column; flex-wrap: wrap}</h3>
+	<div class="container flex column wrap height250">
+		<div class="item-1 item">Item 1</div>
+		<div class="item-2 item">Item 2</div>
+		<div class="item-3 item">Item 3</div>
+        <div class="item-4 item">Item 4</div>
+		<div class="item-5 item">Item 5</div>
+		<div class="item-6 item">Item 6</div>
+        <div class="item-7 item">Item 7</div>
+		<div class="item-8 item">Item 8</div>
+		<div class="item-9 item">Item 9</div>
+	</div>
+    
+    <p>Like the row-reverse property, you can swap the top-to-bottom direction 
+    of a column with the value column-reverse.</p>
+    
+    <h3>container {display: flex; flex-direction: column-reverse}</h3>
+	<div class="container flex column-reverse">
+		<div class="item-1 item">Item 1</div>
+		<div class="item-2 item">Item 2</div>
+		<div class="item-3 item">Item 3</div>
+	</div>
+        
+    </body>
+</html>

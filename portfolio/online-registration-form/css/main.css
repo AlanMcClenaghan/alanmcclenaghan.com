@@ -1,0 +1,242 @@
+/********************
+General styles
+********************/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Merriweather', serif;
+  color: rgb(157, 163, 168);
+}
+
+#wrapper {
+  width: 100%;
+}
+
+/********************
+Header styles
+********************/
+
+#header {
+  background-color: #2d3945;
+}
+
+h1 {
+  font-size: 1.4em;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 28px 0;
+}
+
+#signup {
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px 0 40px;
+}
+
+h2 {
+  font-size: 1.2em;
+  color: #2d3945;
+  margin-top: 30px;
+}
+
+#border{
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1px;
+  border-top: 5px solid black;
+  border-bottom: 2px solid black;
+}
+
+/********************
+Form styles
+********************/
+
+#container {
+  width: 90%;
+  max-width: 600px;
+  margin: auto;
+}
+
+/*
+#contact {
+  border-bottom: 2px solid black;
+}
+*/
+
+fieldset {
+  margin: 0 auto;
+  padding: 0;
+  border: none;
+}
+
+legend {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #2d3945;
+  width: 100%;
+  padding: 30px 0 20px;
+}
+
+#newsletter legend {
+  background-color: azure;
+  padding-left: 5%;
+}
+
+.newsletters {
+  background-color: azure;
+  padding: 5%;
+}
+
+label {
+  display: block;
+  margin-bottom: 15px;
+  color: rgb(157, 163, 168);
+}
+
+input[type=text],
+input[type=email],
+input[type=tel],
+select,
+textarea {
+  font-family: 'Merriweather', serif;
+  height: 50px;
+  border: none;
+  font-size: 1em;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  background-color: #eff0f1;
+  color: rgb(157, 163, 168);
+  margin-bottom: 20px;
+  transition-duration: .5s;
+}
+
+input[id="zip"] {
+  width: 50%;
+}
+
+input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: rgba(157, 163, 168, 0.5);
+  text-align: right;
+  font-style: italic;
+}
+
+input::-moz-placeholder { /* Firefox 19+ */
+  color: rgba(157, 163, 168, 0.5);
+  text-align: right;
+  font-style: italic;
+}
+
+input:-moz-placeholder { /* --- Older versions of Firefox --- */
+  color: rgba(157, 163, 168, 0.5);
+  text-align: right;
+  font-style: italic;
+}
+
+input:-ms-input-placeholder { /* IE 10+ */
+  color: rgba(157, 163, 168, 0.5);
+  text-align: right;
+  font-style: italic;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  margin: 10px 10px 10px 0;
+  transition-duration: .5s;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  border-radius: 50%;
+}
+
+input[type=checkbox]:hover,
+input[type=radio]:hover {
+  box-shadow:0px 0px 10px black;
+  transition-duration: .5s;
+}
+
+.news,
+.format {
+  display: inline;
+}
+
+#topics {
+  margin: 50px 0 30px;
+}
+
+textarea {
+  height: 100px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 0;
+  background-color: white;
+  border: 2px solid black;
+}
+
+input:hover,
+select:hover,
+textarea:hover {
+  box-shadow: 0px 0px 10px black;
+  transition-duration: .5s;
+}
+
+button {
+  font-family: 'Merriweather', serif;
+  color: #FFF;
+  background-color: #4ebbb5;
+  font-size: 1.6em;
+  border-radius: 5px;
+  width: 100%;
+  border: none;
+  padding: 20px 0 20px;
+  margin-bottom: 20px;
+  outline: 0;
+  transition-duration: .5s;
+}
+
+button:hover {
+  box-shadow:0px 0px 10px black;
+  transition-duration: .5s;
+  background-color: firebrick;
+}
+
+#footer {
+  text-align: center;
+  font-style: italic;
+  background-color: #2d3945;
+  color: white;
+  padding: 30px 0;
+  margin-top: 30px;
+}
+
+@media screen and (min-width: 768px) {
+
+  #contact label {
+    display: inline-block;
+    width: 145px;
+  }
+  
+  input[type=text],
+  input[type=email],
+  input[type=tel],
+  select {
+    width: 450px;
+  }
+  
+  input[id="zip"] {
+    width: 30%;
+  }
+
+}

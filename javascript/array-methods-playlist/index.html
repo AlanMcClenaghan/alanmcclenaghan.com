@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Musical Playlist</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>My Music Playlist</h1>
+    <div id="listDiv">
+    
+    </div>
+    <script>
+        
+        function printList( list ) {
+          var listHTML = '<ol>';
+          for (var i = 0; i < list.length; i += 1) {
+            listHTML += '<li>' + list[i] + '</li>';
+          }
+          listHTML += '</ol>';
+          print(listHTML);
+        }
+        
+        function print(html) {
+          document.write(html);
+        }
+
+    </script>
+    
+    <script>
+        
+        var playList = [];
+        playList.push("I Did it My Way");
+        playList.push("Respect", "Imagine");
+        playList.unshift("Born to Run");
+        playList.push("Louie Louie", "Maybellene");
+        printList( playList );
+        console.log(playList);
+        for ( var i = 0; i < playList.length; i++ ) {
+            console.log(playList[i]);
+        }
+        
+    </script>
+</body>
+</html>

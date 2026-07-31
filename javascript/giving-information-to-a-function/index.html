@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Giving Information to a Function</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Let's Make a Function</h1>
+        <p>View Page Source for example code in the script tags below.</p>
+        
+        <p>View the console for the output of the code.</p>
+        <script>
+            
+            function getRandomNumber( upper ) {
+                var randomNumber = Math.floor( Math.random() * upper ) + 1; 
+                return randomNumber;
+            }
+            
+            console.log( getRandomNumber( 6 ) );
+            console.log( getRandomNumber( 10 ) );
+            console.log( getRandomNumber( 100 ) );
+            console.log( getRandomNumber( 1000000 ) );
+            
+            function getArea(width, length, unit) {
+                var area = width * length;
+                return area + " " + unit;
+            }
+            
+            console.log( getArea( 10, 20, 'sq ft' ) );
+            console.log( getArea( 100, 10, 'sq ft' ) );
+            console.log( getArea( 100, 100, 'sq m' ) );
+        
+        </script> 
+    </div>
+</body>
+</html>

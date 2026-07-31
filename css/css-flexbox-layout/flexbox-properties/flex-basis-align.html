@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Flexbox Layout</title>
+	<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/page.css">
+	<style>
+        
+    .flex {
+        display: flex;
+    }
+        
+    .wrap {
+        flex-wrap: wrap;
+    }
+        
+    .flex-grow-one {
+        flex-grow: 1;
+    }
+        
+    .flex-basis-200 {
+        flex-basis: 200px;
+    }
+        
+    .flex-one-200 {
+        flex: 1 200px;
+    }
+        
+    .align-items-stretch {
+        align-items: stretch;
+    }
+        
+    .align-items-start {
+        align-items: flex-start;
+    }
+        
+    .align-items-end {
+        align-items: flex-end;
+    }
+        
+    .align-items-center {
+        align-items: center;
+    }
+        
+    .align-self-start {
+        align-self: flex-start;
+    }
+        
+    .align-self-end {
+        align-self: flex-end;
+    }
+        
+    .align-self-center {
+        align-self: center;
+    }
+        
+    .height450 {
+        height: 450px;
+    }
+        
+    </style>
+</head>
+<body>
+    <h1>Flexbox:</h1>
+    
+    <h2>flex-basis, flex, align-items, align-self</h2>
+    
+    <p>The flex-basis property gives you even more control over the size of flex items.</p>
+    
+    <p>flex and flex-basis apply to flex items only.</p>
+        
+    <p>flex-basis specifies the initial main size of a flex item.</p>
+
+    <p>You set the initial size you want the flex items to be, 
+    then flexbox evenly distributes the free space according that size.</p>
+    
+    <h3>container {display: flex; flex-wrap: wrap}
+    <br>item {flex-grow: 1; flex-basis: 200px}</h3>
+	<div class="container flex wrap">
+		<div class="item-1 item flex-grow-one flex-basis-200">
+			Item 1
+			<p>Mustache cred 3 wolf moon shabby chic, flannel vegan Godard selfies aesthetic taxidermy post-ironic forage deep v tousled.</p>
+		</div>
+		<div class="item-2 item flex-grow-one flex-basis-200">
+			Item 2
+			<p>Vegan meggings hashtag, before they sold out Pitchfork next level vinyl. Fanny pack direct trade High Life.</p>
+			<p>Bicycle rights mumblecore irony disrupt.</p>
+		</div>
+		<div class="item-3 item  flex-grow-one flex-basis-200">
+			Item 3
+			<p>Banksy squid distillery Portland whatever, lo-fi Wes Anderson.</p>
+		</div>
+		<div class="item-4 item flex-grow-one flex-basis-200">
+			Item 4
+			<p>Sriracha raw denim fixie.</p>
+		</div>
+	</div>
+    
+    <p>The flex shorthand property intelligently sets flexbox values when you don't specify them.</p>
+    
+    <p>flex is the shorthand for flex-grow, flex-basis and flex-shrink.
+    Using only one number value for flex sets the flex-grow value of an item.</p>
+
+    <p>The second and third values are optional in the flex shorthand.<p>
+    
+    <p>Setting only one number value for flex automatically sets the flex-basis value to 0.</p>
+
+    <p>Shorthand example: flex: 1 200px</p>
+    
+    <h3>container {display: flex; flex-wrap: wrap; }
+    <br>item {flex-grow: 1; flex-basis: 200px; align-items: stretch;}</h3>
+	<div class="container flex wrap height450 align-items-stretch">
+		<div class="item-1 item flex-one-200">
+			Item 1
+			<p>Mustache cred 3 wolf moon shabby chic, flannel vegan Godard selfies aesthetic taxidermy post-ironic forage deep v tousled.</p>
+		</div>
+		<div class="item-2 item flex-one-200">
+			Item 2
+			<p>Vegan meggings hashtag, before they sold out Pitchfork next level vinyl. Fanny pack direct trade High Life.</p>
+			<p>Bicycle rights mumblecore irony disrupt.</p>
+		</div>
+		<div class="item-3 item  flex-one-200">
+			Item 3
+			<p>Banksy squid distillery Portland whatever, lo-fi Wes Anderson.</p>
+		</div>
+		<div class="item-4 item flex-one-200">
+			Item 4
+			<p>Sriracha raw denim fixie.</p>
+		</div>
+    </div>
+    
+    <p>Align flex items on the cross axis with the align-items and align-self properties</p>
+    
+    <p>The align-items property applies to flex containers only.</p>
+
+    <p>align-items aligns flex items vertically in the flex container.</p>
+    
+    <p>To align all flex items to the start of the cross axis, use the align-items: flex-start;.</p>
+    
+    <h3>container {display: flex; flex-wrap: wrap; align-items: flex-start;}
+    <br>item {flex-grow: 1; flex-basis: 200px}</h3>
+    <div class="container flex wrap height450 align-items-start">
+		<div class="item-1 item flex-one-200">
+			Item 1
+			<p>Mustache cred 3 wolf moon shabby chic, flannel vegan Godard selfies aesthetic taxidermy post-ironic forage deep v tousled.</p>
+		</div>
+		<div class="item-2 item flex-one-200">
+			Item 2
+			<p>Vegan meggings hashtag, before they sold out Pitchfork next level vinyl. Fanny pack direct trade High Life.</p>
+			<p>Bicycle rights mumblecore irony disrupt.</p>
+		</div>
+		<div class="item-3 item  flex-one-200">
+			Item 3
+			<p>Banksy squid distillery Portland whatever, lo-fi Wes Anderson.</p>
+		</div>
+		<div class="item-4 item flex-one-200">
+			Item 4
+			<p>Sriracha raw denim fixie.</p>
+		</div>
+    </div>
+    
+    <p>align-items: flex-end; packs the items toward the end of the cross axis.</p>
+    
+    <h3>container {display: flex; flex-wrap: wrap; align-items: flex-end; align-items: flex-end;}
+    <br>item {flex-grow: 1; flex-basis: 200px}</h3>
+    <div class="container flex wrap height450 align-items-end">
+		<div class="item-1 item flex-one-200">
+			Item 1
+			<p>Mustache cred 3 wolf moon shabby chic, flannel vegan Godard selfies aesthetic taxidermy post-ironic forage deep v tousled.</p>
+		</div>
+		<div class="item-2 item flex-one-200">
+			Item 2
+			<p>Vegan meggings hashtag, before they sold out Pitchfork next level vinyl. Fanny pack direct trade High Life.</p>
+			<p>Bicycle rights mumblecore irony disrupt.</p>
+		</div>
+		<div class="item-3 item  flex-one-200">
+			Item 3
+			<p>Banksy squid distillery Portland whatever, lo-fi Wes Anderson.</p>
+		</div>
+		<div class="item-4 item flex-one-200">
+			Item 4
+			<p>Sriracha raw denim fixie.</p>
+		</div>
+    </div>
+
+    <p>align-items: center; perfectly centers items along the cross axis.</p>
+    
+    <h3>container {display: flex; flex-wrap: wrap; align-items: center;}
+    <br>item {flex-grow: 1; flex-basis: 200px}</h3>
+    <div class="container flex wrap height450 align-items-center">
+		<div class="item-1 item flex-one-200">
+			Item 1
+			<p>Mustache cred 3 wolf moon shabby chic, flannel vegan Godard selfies aesthetic taxidermy post-ironic forage deep v tousled.</p>
+		</div>
+		<div class="item-2 item flex-one-200">
+			Item 2
+			<p>Vegan meggings hashtag, before they sold out Pitchfork next level vinyl. Fanny pack direct trade High Life.</p>
+			<p>Bicycle rights mumblecore irony disrupt.</p>
+		</div>
+		<div class="item-3 item  flex-one-200">
+			Item 3
+			<p>Banksy squid distillery Portland whatever, lo-fi Wes Anderson.</p>
+		</div>
+		<div class="item-4 item flex-one-200">
+			Item 4
+			<p>Sriracha raw denim fixie.</p>
+		</div>
+    </div>
+
+    <p>The align-self property applies to flex items only.</p>
+    
+    <p>align-self: flex-start; aligns a flex item to the start of the cross axis.</p>
+    
+    <p>align-self: flex-end; aligns a flex item to the end of the cross axis.</p>
+    
+    <p>align-self: center; aligns a flex item to the center of the cross axis.</p>
+    
+    <h3>container {display: flex; flex-wrap: wrap}
+    <br>item {flex-grow: 1; flex-basis: 200px; align-self: flex-start/flex-end/center;}</h3>
+    <div class="container flex wrap height450">
+		<div class="item-1 item flex-one-200 align-self-start">
+			Item 1
+			<p>Mustache cred 3 wolf moon shabby chic, flannel vegan Godard selfies aesthetic taxidermy post-ironic forage deep v tousled.</p>
+		</div>
+		<div class="item-2 item flex-one-200 align-self-end">
+			Item 2
+			<p>Vegan meggings hashtag, before they sold out Pitchfork next level vinyl. Fanny pack direct trade High Life.</p>
+			<p>Bicycle rights mumblecore irony disrupt.</p>
+		</div>
+		<div class="item-3 item  flex-one-200 align-self-center">
+			Item 3
+			<p>Banksy squid distillery Portland whatever, lo-fi Wes Anderson.</p>
+		</div>
+		<div class="item-4 item flex-one-200">
+			Item 4
+			<p>Sriracha raw denim fixie.</p>
+		</div>
+    </div>
+    
+    </body>
+</html>

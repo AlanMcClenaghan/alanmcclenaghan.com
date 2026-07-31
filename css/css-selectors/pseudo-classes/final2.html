@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Selectors</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+    <style>
+        /* Base Styles -------------------------------- */
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            line-height: 1.5;
+            color: #384047;
+            padding: 10px 0 80px;
+        }
+        div {
+            max-width: 610px;
+            margin: auto;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 14px;
+        }
+        a {
+            color: #4183c4;
+        }
+
+        /* Substring Matching Attribute Selectors ---- */
+        
+        
+        /*
+        ^ tells the browser to match a piece of code that’s at the beginning of an attribute's value
+        */
+
+        a[href^="http"] {
+            color: #52bab3;
+            text-decoration: none;
+        }
+        
+        
+        /*
+        $ matches a piece at the end of an attribute's value.
+        */
+        
+        a[href$=".pdf"] {
+            background-image: url(img/icn-pdf.svg)
+        }
+        
+        a[href$=".jpg"] {
+            background-image: url(img/icn-picture.svg)
+        }
+        
+        a[href$=".zip"] {
+            background-image: url(img/icn-zip.svg)
+        }
+        
+        /*
+        * matches any part of an attribute's value.
+        */
+        
+        a[href*="downloads"] {
+            background-repeat: no-repeat;
+            background-size: 18px 18px;
+            padding-left: 25px;
+        }
+        
+        img[src*="thumb"] {
+            margin: 4px;
+            border: solid 2px;
+            width: 180px;
+            height: 140px;
+        }
+        
+        img[src*="bay"] {
+            border-color: red;
+        }
+
+    </style>
+</head>
+<body>
+	<div class="gallery">
+        <h1>CSS Selectors</h1>
+        <h2>2. Going Further with Attribute Selectors and Pseudo-Classes</h2>
+            <p>Inspect the head element for use of Substring Matching Attribute Selectors &ndash; "Begins With", "End With", "Contains".</p>
+        
+		<h1>My Gallery</h1>
+		<p><a href="page-1.html">Lorem ipsum dolor</a> sit amet, consectetur adipiscing elit. Morbi lacinia nibh sed justo efficitur, vitae accumsan risus euismod. <a href="page-2.html">Praesent quis ornare</a> libero. Nulla <a href="page-3.html">sed eros efficitur</a>, tempus justo a, tincidunt neque Morbi diam elit.</p>
+		
+		<img src="img/thumbnails/trees.jpg" alt="">
+		<img src="img/thumbnails/falls.jpg" alt="">
+		<img src="img/thumbnails/sunset.jpg" alt="">
+		<img src="img/thumbnails/lake.jpg" alt="">
+		<img src="img/thumbnails/beach.jpg" alt="">
+		<img src="img/thumbnails/bay.jpg" alt="">
+		
+		<h2>Download Photos</h2>
+		<ul>
+			<li><a href="http://downloads/gallery.pdf">Download as PDF</a></li>
+			<li><a href="http://downloads/gallery.jpg">Download as JPGs</a></li>
+			<li><a href="http://downloads/gallery.zip">Download as zip</a></li>
+		</ul>
+	</div>
+</body>
+</html>

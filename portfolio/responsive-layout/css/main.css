@@ -1,0 +1,328 @@
+/* ================================= 
+Smartphone Styles
+==================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  line-height: 1.6;
+  color: #4a4a4a;
+}
+
+#wrapper {
+  max-width: 100%;
+  margin: 0 auto;
+  background-color: aquamarine;
+  box-shadow: 0 0 30px 10px #ddd;
+}
+
+h1 {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 1.75em;
+  margin: 20px 0 20px 0;
+  padding: 10px;
+}
+
+h2,
+a {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.4em;
+}
+
+h2 {
+  margin-bottom: 50px;
+}
+
+h3 {
+  font-weight: 400;
+  font-size: 1.6em;
+}
+
+h4,
+h4 a {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 0.9em;
+}
+
+p {
+  font-size: 1.3em;
+  font-weight: lighter;
+  color: #7f7f7f;
+  padding: 0 5%;
+}
+
+ul {
+  list-style: none;
+  margin-bottom: 50px;
+  padding: 0;
+}
+
+.main-nav a {
+  display: block;
+  text-decoration: none;
+  background-color: #fff;
+  width: 90%;
+  margin: 0 5% 7px;
+  padding: 10px;
+  color: #4a4a4a;
+}
+
+.profile img {
+  max-width: 60%;
+  border: 10px solid white;
+}
+
+.profile p {
+  font-weight: normal;
+  color: white;
+  margin-bottom: 60px;
+}
+
+#portfolio,
+#skills {
+  background-color: #fff;
+  padding: 40px 0;
+}
+
+#skills {
+  border-top: 10px solid aquamarine;
+}
+
+#portfolio p,
+#skills p {
+  line-height: 1.5em;
+  margin-bottom: 40px;
+}
+
+.portfolio-image {
+  max-width: 90%;
+}
+
+.skills-image {
+  max-width: 90%;
+  background-color: #eee;
+  padding: 5% 22%;
+}
+
+#contact {
+  color: white;
+  padding: 50px 5%;
+}
+
+#contact p {
+  font-weight: normal;
+  color: white;
+  padding: 0 5%;
+}
+
+#contact a {
+  text-decoration: none;
+  text-transform: lowercase;
+  margin-left: 10px;
+  font-size: 1em;
+  font-weight: bold;
+  color: white;
+}
+
+#contact a:hover {
+  color: #a7a7a7;;
+}
+
+.footer-nav {
+  width: 90%;
+  margin: 0 5%;
+  padding: 30px 0;
+  border-top: 1px solid white;
+}
+
+.bottom {
+  float: left;
+  margin: 15px 0 15px;
+}
+
+.back {
+  float: right;
+  margin: 15px 0 15px;
+}
+
+.back a {
+  text-decoration: none;
+  color: #4a4a4a;
+}
+
+a:hover {
+  color: #a7a7a7;
+}
+
+.bottom-nav {
+  display: none;
+}
+
+/*************************
+Clearfix
+*************************/
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/**************************************
+TABLET STYLES
+**************************************/
+
+@media screen and (min-width: 768px) {
+  
+  .main-nav li {
+    display: inline-block;
+    margin: 0 20px;
+  }
+  
+  .main-nav a {
+    display: inline;
+    padding: 15px;
+    background-color: aquamarine;
+  }
+  
+  profile {
+    padding-bottom: 50px;
+  }
+
+  .profile p {
+    width: 60%;
+    text-align: left;
+  }
+  
+  .profile img {
+    float: right;
+    width: 35%;
+    margin: 0 5% 0 0;
+
+  }
+  
+  .col {
+    float: left;
+    width: 42.5%;
+    margin-left: 5%;
+  }
+  
+  .col:nth-child(1n) {
+    clear: right;
+  }
+  
+  .col2 {
+    float: left;
+    width: 33%;
+    margin: 20px 0 0 0.25%;
+  }
+  
+  .portfolio-image {
+    max-width: 100%;
+  }
+  
+  .portfolio-item p {
+    width: 90%;
+    margin: auto;
+  }
+  
+  #contact {
+    padding: 40px 15%;
+  }
+
+  .back {
+     display: none;
+  }
+  
+  .bottom-nav {
+    display: inline;
+    float: right;
+    margin: 0;
+  }
+  
+  .bottom-nav li {
+    display: inline;
+    padding-left: 20px;
+  }
+  
+  .bottom-nav li a {
+    text-decoration: none;
+    font-size: 1em;
+    color: #4a4a4a;
+  }
+  
+   .bottom-nav a:hover {
+    color: #a7a7a7;
+  }
+  
+}
+
+/**************************************
+LARGE-SCREEN STYLES
+**************************************/
+
+@media screen and (min-width: 1024px) {
+
+  #wrapper {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    margin: 36px 5%;
+    padding: 0;
+  }
+  
+  a {
+    padding: 20px;  
+  }
+  
+  .name {
+    float: left;
+  }
+  
+  .main-nav {
+    float: right;
+    margin-top: 43px;
+    margin-right: 3%;
+    padding: 0;
+  }
+  
+  .main-nav li {
+    margin: 0;
+  }
+  
+  a {
+    padding: 20px;  
+  }
+  
+  .bottom-nav a {
+    padding: 0;
+  }
+  
+  #portfolio,
+  #skills{
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  .col {
+    float: left;
+    width: 30%;
+    margin: 20px 0 0 2.5%;
+  }
+  
+  .col:nth-child(4n) {
+    clear: right;
+  }
+  
+}

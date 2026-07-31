@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Alan McClenaghan | HTML lists</title>
+        <style>
+            .circle {
+                list-style-type: circle;
+            }
+            .square {
+                list-style-type: square;
+            }
+            .none {
+                list-style-type: none;
+            }
+            dt::after {
+              content: ": ";
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Examples of HTML Lists</h1>
+            <h2>Unordered Lists</h2>
+                <h3>Default bullets</h3>
+                <ul>
+                  <li>Item</li>
+                  <li>Item</li>
+                  <li>Item</li>
+                </ul>
+                <h3>Circle bullets</h3>
+                <ul class="circle">
+                  <li>Item</li>
+                  <li>Item</li>
+                  <li>Item</li>
+                </ul>
+                <h3>Square bullets</h3>
+                <ul class="square">
+                  <li>Item</li>
+                  <li>Item</li>
+                  <li>Item</li>
+                </ul>
+                <h3>No bullets</h3>
+                <ul class="none">
+                  <li>Item</li>
+                  <li>Item</li>
+                  <li>Item</li>
+                </ul>
+            <h2>Ordered Lists</h2>
+                <h3>Default numbers</h3>
+                <ol>
+                  <li>Item</li>
+                  <li>Item</li>
+                  <li>Item</li>
+                </ol>
+                <h3>Uppercase letters</h3>
+                <ol type="A">
+                  <li>Item</li>
+                  <li>Item</li>
+                  <li>Item</li>
+                </ol>
+                <h3>Lowercase letters</h3>
+                <ol type="a">
+                  <li>Item</li>
+                  <li>Item</li>
+                  <li>Item</li>
+                </ol>
+                <h3>Uppercase Roman numerals</h3>
+                <ol type="I">
+                  <li>Item</li>
+                  <li>Item</li>
+                  <li>Item</li>
+                </ol>
+                <h3>Lowercase Roman numerals</h3>
+                <ol type="i">
+                  <li>Item</li>
+                  <li>Item</li>
+                  <li>Item</li>
+                </ol>
+                <h3>Default numbers "reversed"</h3>
+                  <ol reversed>
+                    <li>Item</li>
+                    <li>Item</li>
+                    <li>Item</li>
+                  </ol>
+                <h3>Default numbers with "start" attribute</h3>
+                    <ol start="10">
+                      <li>Item</li>
+                      <li>Item</li>
+                      <li>Item</li>
+                    </ol>
+            <h2>Nested Lists</h2>
+                <h3>Bullets - Numbers</h3>
+                    <ul>
+                      <li>Item
+                        <ol>
+                          <li>Item</li>
+                          <li>Item</li>
+                          <li>Item</li>
+                        </ol></li>
+                      <li>Item</li>
+                      <li>Item</li>
+                    </ul>
+                <h3>Bullets - Numbers</h3>
+                    <ol>
+                      <li>Item
+                        <ul>
+                          <li>Item</li>
+                          <li>Item</li>
+                          <li>Item</li>
+                        </ul></li>
+                      <li>Item</li>
+                      <li>Item</li>
+                    </ol>
+            <h2>Description Lists</h2>
+                <h3>Term - definition</h3>
+                    <dl>
+                        <dt>Coffee</dt>
+                        <dd>A black hot drink</dd>
+                        <dt>Milk</dt>
+                        <dd>A white cold drink</dd>
+                    </dl>
+                <h3>Displaying metadata in key-value pairs</h3>
+                    <dl class"metadata">
+                      <dt>Forename</dt>    
+                      <dd>Alan</dd>
+                      <dt>Surname</dt>
+                      <dd>McClenaghan</dd>
+                      <dt>Birthplace</dt>
+                      <dd>Belfast</dd>
+                    </dl>
+
+    </body>
+</html>

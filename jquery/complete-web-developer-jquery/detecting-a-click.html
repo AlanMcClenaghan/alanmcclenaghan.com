@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        
+        <title>Detecting a click | jQuery | The Complete Web Developer Course 2.0</title>
+        
+        <style>
+            
+            div {
+                margin: 50px;
+            }
+        
+            .circle {
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+            }
+            
+            .square {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .green {
+                background-color: green;
+            }
+            
+            .red {
+                background-color: red;
+            }
+            
+            .blue {
+                background-color: blue;
+            }
+
+
+        </style>
+        
+    </head>
+
+    <body>
+     
+        <div class="green circle"></div>
+        
+        <div class="red square"></div>
+        
+        <div class="blue square"></div>
+
+        
+        <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        
+        <script type="text/javascript">
+
+            $('.circle').click(function() {
+                alert("The circle was clicked!");
+            });
+            
+            $('.square').click(function() {
+                alert("A square was clicked!");
+            });
+            
+//            $('div').click(function() {
+//                alert("A div was clicked!");
+//            });
+
+        </script>
+        
+    </body>
+
+</html>

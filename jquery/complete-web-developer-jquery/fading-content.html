@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        
+        <title>Fading Content | jQuery | The Complete Web Developer Course 2.0</title>
+        
+        <style>
+            
+            div {
+                margin: 50px;
+            }
+        
+            .circle {
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+            }
+            
+            .square {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .green {
+                background-color: green;
+            }
+            
+            .red {
+                background-color: red;
+            }
+            
+            .blue {
+                background-color: blue;
+            }            
+
+        </style>
+        
+    </head>
+
+    <body>
+        
+        <p id="text">Click the button to fade out the text</p>
+        <button id="fade-out">Fade out text</button>   
+        
+        <p>Click the shapes to make them fade away.</p>
+        
+        <div class="green circle"></div>
+        
+        <div class="red square"></div>
+        
+        <div class="blue square"></div>
+        
+        <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        
+        <script type="text/javascript">
+            
+            $('#fade-out').click(function() {
+                if ($("#text").css("display") != "none") {
+                    $("#text").fadeOut("slow", function() {
+                        alert("You have hidden the " + $("#text").attr("id"));
+                        $("#fade-out").html('Fade in text');
+                    });             
+                } else {
+                    $("#text").fadeIn("slow", function() {
+                        alert("You have revealed the " + $("#text").attr("id"));
+                        $("#fade-out").html('Fade out text');
+                    });  
+                }
+            });        
+            
+            $('div').click(function() {
+                $(this).fadeOut("slow", function() {
+                    alert("You have hidden a " + $(this).attr("class"));
+                });             
+            });
+   
+ 
+        </script>
+        
+    </body>
+
+</html>

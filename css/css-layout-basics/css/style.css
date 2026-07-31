@@ -1,0 +1,381 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+* {
+    box-sizing: border-box;
+    /* box-sizing: border-box; 
+    forces any padding and borders 
+    into the width and height of an 
+    element instead of expanding it. */
+}
+    
+
+body {
+	font-family: 'Varela Round', sans-serif;
+	line-height: 1.6;
+	color: #3a3a3a;
+}
+
+p {
+	font-size: .95em;
+	margin-bottom: 1.5em;
+}
+
+h2,
+h3,
+a {
+	color: #093a58;
+}
+
+h2,
+h3,
+h4 {
+	margin-top: 0;
+}
+
+h4 {
+	margin-bottom: .4em;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+figure {
+	margin: 0;
+	line-height: 0;
+    
+    position: relative;
+}
+
+figcaption {
+	font-size: .9em;
+	line-height: 1.5;
+	color: #fff;
+	padding: 1em;	
+	background: rgba(19,43,102, .85);
+    
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+/* ---- Navigation ---- */
+
+.name {
+	font-size: 1.25em;
+    margin: 0;
+    /* Prevents the margin collapsing 
+    at the top of the page.*/
+}
+
+.main-nav {
+	margin-top: 5px;
+}
+
+.name,
+.main-nav li {
+	text-align: center;
+	background: #fff;
+	margin-top: 6px;
+	margin-bottom: 6px;
+}
+
+/* Setting an <a> element's display value 
+to block lets you apply top and bottom padding values. */
+.name a,
+.main-nav a {
+    display: block;
+    text-align: center;
+    padding: 10px 15px;
+}
+
+.main-nav a {
+	font-size: .95em;
+	color: #3acec2;
+	text-transform: uppercase;
+}
+
+.main-nav a:hover {
+	color: #093a58;
+}
+
+/* ---- Layout Containers ---- */
+
+/* A wrapper - or container - 
+div is commonly used to center 
+a layout on the page. 
+The wrapper keeps a layout from 
+looking too wide or too narrow 
+depending on the device or viewport width. */
+/*
+.container {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+*/
+
+.main-header {
+	padding-top: .5em;
+	padding-bottom: .5em;
+}
+
+.banner,
+.main-footer {
+	text-align: center;
+}
+
+.banner {
+	color: #fff;
+	background: #3acec2;
+    padding: 3.2em 0;
+	margin-bottom: 60px;
+}
+
+.col {
+	padding-right: 1em;
+	padding-left: 1em;
+}
+
+/*
+.main-header {
+    text-align: center;
+    / Center aligns content inside main header /
+	padding-top: 1.5em;
+    / Prevents the margin collapsing at the top of the page. /
+	padding-bottom: 1.5em;
+	background: #3acec2;
+	margin-bottom: 30px;
+}
+
+*/
+
+.main-footer {
+	background: #d9e4ea;
+	padding: 2em 0;
+	margin-top: 30px;
+}
+
+/* ---- Page Elements ---- */
+
+.logo {
+	width: 190px;
+}
+
+.headline {
+	margin-bottom: 0;
+}
+
+.icon-location {
+    width: 35px;
+    position: absolute;
+    top: -15px;
+    right: -15px;
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+/* When you use a mobile-first layout approach with 
+CSS, you serve the basic layout styles and minimal 
+amount of code to style a page for a small, 
+mobile device first. Then, using media queries, 
+you add breakpoints which adjust the layout for 
+wider screens and devices. */
+
+@media (min-width: 769px) {
+    
+     body {
+        padding-top: 68px;
+    }
+    
+    .main-header {
+        position: fixed;
+        background: white;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, .4);
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+    }
+
+	.container {
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	.name,
+	.col {
+		float: left;
+	}
+
+	.primary,
+	.secondary {
+		width: 50%;
+	}
+
+	.main-nav {
+		float: right;
+	}
+
+	.main-nav li {
+		display: inline-block;
+		margin-left: 15px;
+	}
+
+	.tagline {
+		font-size: 1.4em;
+	}
+
+	/* ---- Float clearfix ---- */
+
+	.clearfix::after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
+
+}
+
+@media (min-width: 1025px) {
+	
+	.container {
+		width: 80%;
+		max-width: 1150px;
+	}
+
+	.primary {
+		width: 40%;
+	}
+
+	.secondary,
+	.tertiary {
+		width: 30%;
+	}
+
+}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /* Uses a wrapper div around the main content 
+    to create a sticky footer that sticks to the 
+    bottom of the page regardless of the amount 
+    of content on the page. */
+/*
+	.wrap {
+		min-height: calc(100vh - 89px);
+    }
+*/
+        /* Use calc() to write a mathematical 
+        expression that will subtract the footer 
+height from the viewport's total height. */
+
+
+/*
+	.container {
+		width: 80%;
+		max-width: 1150px;
+		margin: 0 auto;
+        / Setting the left and right margins 
+        to the value auto centers the wrapper 
+        in the browser. /
+	}
+*/
+    
+    /* The display value inline-block 
+    generates an element that's like 
+    a block element but it's also flowed 
+    with surroundings as if 
+    it were an inline element.  */
+/*
+    .name,
+    .main-nav,
+    .main-nav li {
+        display: inline-block;
+    }
+    
+    .name {
+        width: 240px;
+        margin-right: 50px;
+    }
+    
+    .main-nav li {
+        margin-right: 12px;
+    }
+*/
+    
+/* Creating columns using inline-block. */
+/*
+    .col {
+        display: inline-block;
+        width: 50%;
+        margin-right: -5px;
+        vertical-align: top;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+*/
+    
+/* One of the easiest ways to use floats is with an image. Text will wrap around an image with the float property applied to it, like in a magazine layout. */
+/*
+	.feat-img {
+		width: 300px;
+        float: left;
+        margin: 5px 25px 25px 0;
+        padding: 10px;
+        border: solid 1px #d9e4ea;
+	}
+*/
+
+
+
+/*
+Positioned elements rely on you telling the browser where to place them, using values called positioning offsets, for the element's top, right, bottom or left position.
+
+When you use absolute positioning, you place the absolutely positioned elements in relation to a parent container; the parent container is the positioning context.
+
+You can change the positioning context to other containing elements; this lets us position elements precisely where we want them.
+
+Absolute and relative positioning work hand in hand.
+
+An element with relative positioning gives you the control to absolutely position elements anywhere inside it.
+
+An element with absolute positioning is always relative to the first parent that has a relative position.
+
+If no parent element has a relative position, the browser viewport is the positioning context by default.
+*/
+
+/*
+
+Unlike absolute positioning, an element with fixed positioning stays fixed to one spot on the page, regardless of the size of the browser window.
+
+Fixed positioning is always relative to the browser's viewport. Like absolute positioning, you determine the fixed spot using offset values.
+
+When you use relative, absolute or fixed positioning on elements, you may end up with several elements occupying the same space. This can make elements overlap or completely cover up other elements from view.
+
+Positioned elements follow a stacking order that determines which elements display above or below other elements.
+
+By default, the stacking order of positioned elements is the order they appear in the source code.
+
+Elements appearing later in the code sit on top on elements appearing earlier in the code.
+
+The z-index property is directly related to stacking order and it's what prevents elements from overlapping other elements.
+
+An element with a higher z-index value overlaps an element with a lower z-index value.
+
+*/

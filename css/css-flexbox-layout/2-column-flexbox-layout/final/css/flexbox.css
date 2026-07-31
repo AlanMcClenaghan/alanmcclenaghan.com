@@ -1,0 +1,47 @@
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 769px) {
+
+	.main-header,
+    .main-nav,
+    .row {
+        display: flex;
+    }
+    
+    .main-header {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    /*
+    
+    You can assign an equal amount of space to columns with the flex-grow and flex properties.
+    
+    */
+    
+    .col {
+        flex: 1;
+    }
+
+}
+
+@media (min-width: 1025px) {
+
+     /*
+        
+    Giving .main-header a justify-content: space-between; declaration positions the site name on the left side of the header and the navigation menu on the right:
+
+    */
+    
+    .main-header {
+        flex-direction: row;
+        justify-content: space-between;  
+    }
+    
+    .primary {
+        flex: 2;
+    }
+    
+}

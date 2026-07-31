@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Selectors</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/style.css">
+	<style>
+       
+		body {
+			font-family: 'Nunito', sans-serif;
+			color: #616161;
+			padding: 40px 0;
+		}
+        
+        #container {
+            max-width: 500px;
+            margin: auto;
+        }
+        
+        h3 {
+            text-align: center;
+        }
+        
+		ul {
+			list-style: none;
+			margin: auto;
+            margin-bottom: 20px;
+            padding-left: 0;
+		}
+        
+		li {
+			border-bottom: 1px dotted #40918c;
+			padding: 15px 10px;
+		}
+        
+        .code {
+            font-family: Monaco, "Lucida Console", Consolas, monospace;
+            opacity: .5;
+        }
+        
+        
+        
+        /* Structural Pseudo-classes------------------ */
+        
+        #section1 li:first-child {
+            background-color: #52bab3;
+            color: white;
+        }
+        
+        #section1 li:last-child {
+            border: none;
+        }
+        
+        #section2 :only-child {
+            color: #52bab3;
+            font-size: 1.5em;
+        }
+        
+        :empty {
+            background-color: tomato;
+        }
+
+	</style>
+</head>
+<body>
+    <div id="container">
+        <h1>CSS Selectors</h1>
+        <h2>2. Going Further with Attribute Selectors and Pseudo-Classes</h2>
+            <p>Inspect the head element for use of :first-child and last-child; :only-child and :empty.</p>
+        
+        <h3>:first-child and last-child</h3>
+        <ul id="section1">
+            <li>Item 1 &ndash; :first-child color and background-color changed</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+            <li>Item 5</li>
+            <li>Item 6</li>
+            <li>Item 7</li>
+            <li>Item 8</li>
+            <li>Item 9</li>
+            <li>Item 10 &ndash; :last-child border removed</li>		
+        </ul>
+        
+        <h3>:only-child and :empty</h3>
+        <ul id="section2">
+            <li>Item 1</li>
+            <li>Item 2 <span>&check;</span> :only-child color and font size</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+            <li>Item 5</li>
+            <li>Item 6 <span>&check;</span> :only-child color and font size</li>
+            <li></li>
+            <li>Item 8 &ndash; Previous item targeted by :empty-child and background-color changed</li>
+            <li>Item 9</li>
+            <li>Item 10</li>		
+        </ul>
+        
+    </div>
+</body>
+</html>

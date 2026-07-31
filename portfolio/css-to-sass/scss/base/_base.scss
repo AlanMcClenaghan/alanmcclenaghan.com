@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  @include text(1em, 1.6, $color: $text-color-body);
+  font-family: $stack-roboto;
+  text-align: center;
+}
+
+#wrapper {
+  @extend %max100;
+  @extend %margin;
+  background-color: $background-color;
+  box-shadow: 0 0 30px 10px $lightgrey-fill;
+  
+  @media #{$brk-wide} {
+    max-width: 1024px;
+    margin: 0 auto; //Can't apply extend because: You may not @extend an outer selector from within @media. You may only @extend selectors within the same directive.
+  }
+}
+
+ul {
+  list-style: none;
+  margin-bottom: 50px;
+  @extend %no-padding;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+  
+.clearfix:after {
+  clear: both;
+}

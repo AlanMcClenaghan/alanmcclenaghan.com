@@ -1,0 +1,65 @@
+/*****************************************************
+Basic layout styles
+*****************************************************/
+
+*, *:before, *after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.videoWrapper {
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+#transcript {
+  margin: 5%;
+  line-height: 1.5;
+}
+
+span:hover {
+  background-color: #eee;
+}
+
+/*****************************************************
+Video Player skin styles
+*****************************************************/
+
+.mejs__controls:not([style*="display: none"]) {
+  background-color: orange;
+}
+
+.mejs__captions-position-hover {
+  bottom: 45px;
+}
+
+.mejs__time-float-corner {
+  border-color: black transparent transparent transparent;
+}
+
+.mejs__time-current {
+    background: blue;
+}
+
+/*****************************************************
+Tablet and desktop layouts
+*****************************************************/
+  
+@media screen and (min-width: 768px) {
+  
+  .videoWrapper {
+    max-width: 768px;
+    margin: 30px auto;
+    display: block;
+  }
+  
+  #transcript {
+    max-width: 768px;
+    margin: 30px auto;
+    font-size: 1.1em;
+    line-height: 2;
+  }
+  
+}

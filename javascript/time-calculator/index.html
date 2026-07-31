@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/main.css">
+  <title>Time Calculator</title>
+ </head>
+<body>
+  <div class="container">
+  <h1>Time calculator</h1>
+      
+      <script>
+          
+            var secondsPerMin = 60;
+            var minsPerHour = 60;
+            var hoursPerDay = 24;
+            var daysPerWeek = 7;
+            var weeksPerYear = 52;
+            var secondsPerDay = secondsPerMin * minsPerHour * hoursPerDay;
+            document.write('There are ' + secondsPerDay + ' seconds in a day');
+            var yearsAlive = 33; 
+            var secondsAlive = 365 * secondsPerDay * yearsAlive;
+            document.write('I have been alive for more than ' + secondsAlive + ' seconds!');
+      
+      </script>
+      
+<!--  <script src="scripts.js"></script>-->
+  </div>
+</body>
+</html>

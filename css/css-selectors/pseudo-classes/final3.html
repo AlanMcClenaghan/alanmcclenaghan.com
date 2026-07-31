@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Selectors</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/base.css">
+    <style>
+        /* UI element states pseudo-classes ------------ */
+        
+        input:focus,
+        textarea:focus {
+            border-color: #52bab3;
+        }
+        
+        /* Using :disabled */
+        
+        input:disabled {
+            background-color: #ddd;
+        }
+        
+        /* Using :checked */
+        
+        input[type="checkbox"]:checked + label {
+            font-weight: bold;
+        }
+        
+    </style>
+    
+</head>
+<body>
+	<div id="container">
+        <h1>CSS Selectors</h1>
+        <h2>2. Going Further with Attribute Selectors and Pseudo-Classes</h2>
+            <p>Inspect the head element for use of Element States Pseudo-Classes.</p>
+        
+		<form class="form-contact br">
+	  	<h1>Contact</h1>
+
+		  <label for="name">Name:</label> 
+		  <input type="text" id="name">
+
+     	<label for="email">Email:</label>
+     	<input type="email" id="email" placeholder="email@website.com" disabled>
+  		
+			<label>Interests:</label>
+			<input type="checkbox" id="development" name="user_interest"><label for="development">Development</label><br>
+			<input type="checkbox" id="design" name="user_interest"><label for="design">Design</label><br>
+			<input type="checkbox" id="business" name="user_interest"><label for="business">Business</label><br>
+			
+     	<label for="msg">Message:</label>			
+ 			<textarea id="msg" rows="4"></textarea>
+			
+		  <input class="btn default" type="submit" value="Submit">
+		</form>
+	</div>
+</body>
+</html>

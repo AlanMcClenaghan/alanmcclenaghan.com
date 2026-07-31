@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>How Many Fingers Game - Version 1</title>
+
+    <style type="text/css">
+      body {
+        font-family: sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="instructions">How many fingers am I holding up?</h1>
+
+    <input id="guess" type="text" placeholder="Guess here" />
+
+    <input id="submit" type="submit" value="Submit guess" />
+
+    <script type="text/javascript">
+      var fingers = Math.floor(Math.random() * 5 + 1);
+      console.log(fingers);
+      var instructions = document.getElementById("instructions");
+      var guess = document.getElementById("guess");
+      console.log(guess);
+      var submit = document.getElementById("submit");
+
+      submit.onclick = function() {
+        console.log(guess.value);
+        if (guess.value == fingers) {
+          instructions.textContent = "That's correct!";
+        } else {
+          instructions.textContent = "That's wrong! Guess again.";
+          guess.value = "";
+        }
+      };
+    </script>
+  </body>
+</html>

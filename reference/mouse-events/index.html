@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+    crossorigin="anonymous">
+  <title>DOM Manipulaton & Events - Mouse Events</title>
+</head>
+
+<body>
+  <div class="container">
+      <h1>DOM Manipulaton & Events - Mouse Events</h1>
+      <p>View Page Source for example code in the script tags below.</p>      
+      <p>View the console for the output of the code.</p>
+    <div class="row">
+      <div class="col s12">
+        <div id="main" class="card">
+          <div class="card-content">
+            <span class="card-title">Task List</span>
+            <div class="row">
+              <form id="task-form">
+                <div class="input-field col s12">
+                  <input type="text" name="task" id="task" value="Walk the dog">
+                  <label for="task">New Task</label>
+                </div>
+            </div>
+            <input type="submit" value="Add Task" class="btn">
+            </form>
+          </div>
+          <div class="card-action">
+            <h5 id="task-title">Tasks</h5>
+            <ul class="collection">
+              <li class="collection-item">
+                List Item
+                <a href="#" class="delete-item secondary-content">
+                  <i class="fa fa-remove"></i>
+                </a>
+              </li> 
+              <li class="collection-item">
+                List Item
+                <a href="#" class="delete-item secondary-content">
+                  <i class="fa fa-remove"></i>
+                </a>
+              </li> 
+              <li class="collection-item">
+                List Item
+                <a href="#" class="delete-item secondary-content">
+                  <i class="fa fa-remove"></i>
+                </a>
+              </li>
+              <li class="collection-item">
+                List Item
+                <a href="#" class="delete-item secondary-content">
+                  <i class="fa fa-remove"></i>
+                </a>
+              </li>
+              <li class="collection-item">
+                List Item
+                <a href="#" class="delete-item secondary-content">
+                  <i class="fa fa-remove"></i>
+                </a>
+              </li>
+            </ul>
+            <a class="clear-tasks btn black" href="">Clear Tasks</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script>
+
+    // MOUSE EVENTS
+
+    // Element selectors
+    const clearBtn = document.querySelector('.clear-tasks');
+    const card = document.querySelector('.card');
+    const heading = document.querySelector('h5');
+
+    // Event Handler
+    function runEvent(event) {
+        event.preventDefault();
+        console.log(`EVENT TYPE: ${event.type}`);
+        heading.textContent = `MouseX: ${event.offsetX} MouseY: ${event.offsetY}`;
+        document.body.style.backgroundColor = `rgb(${event.offsetX}, ${event.offsetY}, 0)`;
+    }
+
+    // Event listeners
+
+    // Click
+    clearBtn.addEventListener('click', runEvent);
+
+    // Double Click
+    clearBtn.addEventListener('dblclick', runEvent);
+
+    // Click
+    clearBtn.addEventListener('mousedown', runEvent);
+
+    // Click
+    clearBtn.addEventListener('mouseup', runEvent);
+
+    // Click
+    card.addEventListener('mouseenter', runEvent);
+
+    // Click
+    card.addEventListener('mouseleave', runEvent);
+
+    // Click
+    card.addEventListener('mouseover', runEvent);
+
+    // Click
+    card.addEventListener('mouseleave', runEvent);
+
+    // Click
+    card.addEventListener('mousemove', runEvent);
+
+  </script>
+  <script src="mouse-events.js"></script>
+</body>
+
+</html>

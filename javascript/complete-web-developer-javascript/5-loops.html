@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Javascript Loops</title>
+
+    <style type="text/css">
+      body {
+        font-family: sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Javascript Loops</h1>
+
+    <div id="family-members"></div>
+
+    <script type="text/javascript">
+      var family = [
+        "Alan",
+        "Ruth",
+        "Matthew",
+        "Lucy",
+        "Grandad Alan",
+        "Granny Trudy"
+      ];
+      var familyMembers = document.getElementById("family-members");
+      var familyList = "";
+      var newList = "";
+
+      for (var i = 0; i < family.length; i++) {
+        familyList += "<p>" + family[i] + "</p>";
+      }
+
+      console.log(familyList);
+
+      var x = 0;
+
+      while (x < family.length) {
+        newList += "<p>" + family[x] + "</p>";
+        console.log(newList);
+        x++;
+      }
+
+      familyMembers.innerHTML = familyList + newList;
+    </script>
+  </body>
+</html>

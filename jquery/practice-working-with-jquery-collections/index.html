@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Practice in jQuery</title>
+</head>
+<body>
+    <h1>New Orleans Restaurants</h1>
+    
+    <ul id="restaurantList">
+        <li><a href="http://www.datdog.com/">Dat Dog</a></li>
+        <li><a href="https://portofcallnola.com/">Port of Call</a></li>
+        <li><a href="https://www.arnaudsrestaurant.com/">Arnaud's</a></li>
+        <li><a href="http://www.frenchquarter.com/nola/port-st-peter/4214/">Port St. Peter</a></li>
+        <li><a href="http://www.mothersrestaurant.net/">Mother's</a></li>
+    </ul>
+    
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script>
+            
+            //1. Add a "featured" tag to the second item in the list: 
+            //  Append a new span element containing the word "Featured" to the list item
+            //  Add a class of "featured" to the new span element.
+            $('li').eq(1).append('<span>Featured</span>');
+            $('li span').addClass('featured');
+            
+            //2. Add a class of "new" to the last item in the list. You can traverse to the last item or find a jQuery method that helps you select the last item in the list.
+            $('li:last()').addClass('new');
+            
+            //3. Add an attribute to each link so that all anchor tags open in a new tab. 
+            $('a').attr("target", "_blank");
+            
+            //4. Select and print the index and text of each anchor tag to the console
+            $('a').each(function(index, item) {
+            console.log(index, $(item).text())
+            });
+            
+            //5. Refactor question #4 using the 'this' keyword. 
+            $('a').each(function(index) {
+            console.log(index, $(this).text())
+            });
+
+        </script>
+    
+</body>
+</html>

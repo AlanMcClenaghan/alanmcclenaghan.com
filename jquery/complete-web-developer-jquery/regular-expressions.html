@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <title>Regular Expressions | jQuery | The Complete Web Developer Course 2.0</title>
+    
+</head> 
+    
+<body>
+    
+    <h1>Using Regular Expressions</h1>
+    
+    <p>View Page Source for examples of the code used.</p>
+    
+    <p>View the console for the output of the code used.</p>
+    
+            
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script>
+        
+        const regex = /is/;
+//        const regex = /is/i; //Case insensitive search
+//        const regex = /e/g; //Global search returns every instance of search term
+        const string = "Regex is great";
+        const result = string.match(regex);
+        
+        console.log(result)
+    
+    </script>
+    
+</body>
+</html>

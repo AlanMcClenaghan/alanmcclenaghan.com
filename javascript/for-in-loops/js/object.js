@@ -1,0 +1,54 @@
+var person = {
+  name : 'Sarah',
+  country : 'USA',
+  age : 35,
+  treehouseStudent : true,
+  skills : ['JavaScript', 'HTML', 'CSS']
+};
+
+/*
+Just remember that when using a for in loop, 
+you have to use bracket notation to actually access the property value.
+*/
+
+for (var prop in person) {
+  console.log(prop, ': ', person[prop]);
+}
+
+var shanghai = {
+  population: 14.35e6,
+  longitude: '31.2000 N',
+  latitude: '121.5000 E',
+  country: 'CHN'
+};
+
+for (var prop in shanghai) {
+  console.log(prop, ': ', shanghai[prop]);
+}
+
+
+//person.indexOf("Sarah")
+
+person.state = "Oregan";
+
+for (var prop in person) {
+  console.log(prop, ':', person[prop]);
+}
+
+
+function display(message) {
+    var div = document.getElementById("objectDiv");
+    div.innerHTML = message;
+}
+
+var message = '<p>Hello. My name is ' + person.name + '</p>';
+message += '<p>I live in the state of ' + person.state + ' in the ' + person.country + '.</p>';
+person.name = "Rainbow Dash";
+message += '<p>But I wish my name was ' + person.name + '.</p>';
+person.age +=1;
+message += '<p>My age is now ' + person.age + '.</p>';
+message += '<p>I have ' + person.skills.length + ' skills: ';
+message += person.skills.join(', ') + '.</p>';
+
+
+display(message);

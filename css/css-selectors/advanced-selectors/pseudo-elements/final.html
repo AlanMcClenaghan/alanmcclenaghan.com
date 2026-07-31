@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Selectors</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/base.css">
+    <style>
+        
+        .notes h1, h2, h3, p {
+            text-align: center;
+        }
+        
+        
+        /* Pseudo-elements -------------------------------- */
+
+        /*       
+        The ::first-line and ::first-letter pseudo-elements let us target the first line of text and the first character in a line of text.
+        
+        The double colon is  used to distinguish between pseudo-classes and pseudo-elements, but browsers will still support both values.        
+        */
+        
+        .intro::first-line {
+            font-weight: bold;
+            font-size: 1.4em;
+        }
+        
+        .intro::first-letter {
+            float: left;
+            font-size: 80px;
+            color: white;
+            padding: 5px 10px;
+            background-color: #384047;
+            margin: 10px 10px 0 0;
+            border-radius: 5px;
+            line-height: 1;
+        }
+        
+        
+        /*        
+        The ::before and ::after pseudo-elements let us insert virtual elements before and after an element’s content. These virtual elements are visible to the user and are style-able with CSS, but they do not appear in the source code.
+        */
+        
+        /*
+        .jpg:before {
+            content: "JPG – ";
+            font-size: .75em;
+        }
+        */
+        
+        .jpg::before {
+            content: url(img/icn-picture.svg);
+            margin-right: 8px;
+        }
+        
+        .zip::before {
+            content: url(img/icn-zip.svg);
+            margin-right: 8px;
+        }
+        
+        .gallery h1::before,
+        .gallery h1::after {
+            content: "";
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background-color: coral;
+            margin: 0 10px;
+        }
+        
+        
+        /*       
+        the attr() function inserts an element's attribute value as page content.
+        */
+        
+        .d-loads a::after {
+            content: attr(title);
+            display: inline-block;
+            color: initial;
+            font-size: .65em;
+            margin-left: 5px;
+        }
+
+    
+    </style>
+</head>
+<body>
+    <div class="notes">
+        <h1>CSS Selectors</h1>
+        <h2>Advanced Selectors</h2>
+        <p>Inspect the head element for use of Pseudo-Elements.<br>
+        ::first-line and ::first-letter | ::before and ::after | attr()</p>
+        <hr>
+    </div>
+    
+    
+    
+    
+	<div class="gallery">
+		
+		<h1>My Gallery</h1>
+		<p class="intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lacinia nibh sed justo efficitur, vitae accumsan risus euismod. Praesent quis ornare libero. Nulla sed eros efficitur, tempus justo a, tincidunt neque Morbi diam elit.Donec imperdiet aliquam sem ut feugiat. Nunc ligula elit, malesuada nec aliquam eget, cursus in ipsum. Maecenas lacinia est id ante tincidunt vestibulum. Quisque risus justo, convallis vulputate lectus ut, ullamcorper volutpat nibh.</p>
+		
+		<ul class="d-loads">
+			<li><a class="jpg" href="http://downloads/gallery.jpg" title="- JPG">Download</a></li>
+			<li><a class="zip" href="http://downloads/gallery.zip" title="- ZIP">Download</a></li>
+		</ul>
+		
+	</div>
+</body>
+</html>

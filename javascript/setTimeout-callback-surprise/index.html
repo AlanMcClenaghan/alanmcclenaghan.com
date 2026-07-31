@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Callback Function Surprise</title>
+        <link rel='stylesheet' href='styles.css'>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <section id='surprise'>
+            Nothing's going to happen...
+        </section>
+        
+        <script>
+            
+            const surpriseSection = document.getElementById('surprise');
+
+            const randomTime = Math.random() * 4000;
+
+            setTimeout(() => surpriseSection.textContent = '🎉 Surprise! 🎉', randomTime);
+
+        </script>
+        
+        
+        
+        <!-- <script src='surprise.js'></script> -->
+    </body>
+</html>
